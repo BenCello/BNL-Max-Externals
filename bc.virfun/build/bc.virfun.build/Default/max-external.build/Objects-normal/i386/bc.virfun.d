@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_common.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/max_types.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_prefix.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_mess.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_maxtypes.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_byteorder.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysmem.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysfile.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systime.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_expr.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_path.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_wind.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_proto.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atomarray.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atombuf.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obstring.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_hashtab.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_linklist.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_dictionary.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex_util.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/commonsyms.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_strings.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_preprocessor.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systhread.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_drag.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_api.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_syms.h \
+  /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_charset.h

@@ -1,0 +1,298 @@
+Tmax-external
+v6
+r1
+cCheck dependencies
+cSymLink /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default/bc.virfun.mxo /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+cCpResource /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/max.xcconfig /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig
+cCompileC build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun normal i386
+cLd /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun normal x86_64
+cCreateUniversalBinary /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun normal i386\ x86_64
+cTouch /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F90F72900000000000000CC
+t1334900521
+s204
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/SDKSettings.plist
+c000000004F90F705000000000000050B
+t1334900485
+s1291
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000004F90E47E00000000000001DE
+t1334895742
+s478
+
+N/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch
+c000000005264D57000000000000000A4
+t1382339952
+s164
+
+N/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+t1399816892
+s102
+
+N/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun
+t1399816892
+s35896
+
+N/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig
+t1399816892
+s1784
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c
+c0000000052DE49020000000000001EEC
+t1390299394
+s7916
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/Default/bc.virfun.mxo
+t2
+s0
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun
+t1399816892
+s15508
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.LinkFileList
+c00000000536F82BC000000000000008D
+t1399816892
+s141
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o
+t1399816892
+s17592
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun
+t1399816892
+s15416
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.LinkFileList
+c00000000536F82BC000000000000008F
+t1399816892
+s143
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o
+t1399816892
+s20188
+
+N/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/max.xcconfig
+c0000000052F15C9800000000000006F8
+t1391549592
+s1784
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies1d8f113cba1fb941^9f3d1b3cba1fb941^---0#1#1#--18"Check dependencies36"1B62EB78-E9A7-4A08-AF0E-D2F23EA68A0E-
+
+CCompileC build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s421509692.113585
+e421509692.392846
+r1
+xCompileC
+xbuild/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_common.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/max_types.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_prefix.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_mess.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_maxtypes.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_byteorder.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysmem.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysfile.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systime.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_expr.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_path.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_wind.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_proto.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atomarray.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atombuf.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obstring.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_hashtab.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_linklist.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_dictionary.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex_util.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/commonsyms.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_strings.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_preprocessor.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systhread.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_drag.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_api.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_syms.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_charset.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c175"[1mCompileC[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o [1mbc.virfun.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler0c231d3cba1fb941^9b92643cba1fb941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/BenCello/Projects/OMax/OMax5/src/yin+%20&%20co/bc.virfun/bc.virfun.c0000000000000000^2682"[1mCompileC[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o [1mbc.virfun.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=238 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDENORM_WANT_FIX\ =\ 1 -DNO_TRANSLATION_SUPPORT\ =\ 1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.5 -g -Wno-sign-conversion -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/bc.virfun.hmap -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default/include -I/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/DerivedSources/i386 -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -fvisibility=hidden -include /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch -MMD -MT dependencies -MF /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.d --serialize-diagnostics /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.dia -c /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c -o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o36"55189A9A-9E11-431D-BD4B-3311C86176E0-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CCompileC build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s421509692.113705
+e421509692.342618
+r1
+xCompileC
+xbuild/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_common.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/max_types.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_prefix.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_mess.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_maxtypes.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_byteorder.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysmem.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_sysfile.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systime.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_expr.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_path.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_wind.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_proto.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atomarray.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_atombuf.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obstring.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_hashtab.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_linklist.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_dictionary.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex_util.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/commonsyms.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_strings.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_obex.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_preprocessor.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_systhread.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_drag.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_api.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/jpatcher_syms.h
+d/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/ext_charset.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/bc.virfun.c179"[1mCompileC[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o [1mbc.virfun.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler0a2b1d3cba1fb941^89b6573cba1fb941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/BenCello/Projects/OMax/OMax5/src/yin+%20&%20co/bc.virfun/bc.virfun.c0000000000000000^2696"[1mCompileC[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o [1mbc.virfun.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=238 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDENORM_WANT_FIX\ =\ 1 -DNO_TRANSLATION_SUPPORT\ =\ 1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.5 -g -Wno-sign-conversion -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/bc.virfun.hmap -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default/include -I/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/DerivedSources/x86_64 -I/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -fvisibility=hidden -include /Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/macho-prefix.pch -MMD -MT dependencies -MF /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.d --serialize-diagnostics /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.dia -c /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/bc.virfun.c -o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o36"1964CAB0-FB3C-4B55-8D95-B11F29CBCA79-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CCpResource /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/max.xcconfig /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig
+s421509692.112506
+e421509692.113192
+r1
+xCpResource
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/max.xcconfig
+x/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Copy /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig183"[1mCpResource[0m /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/max.xcconfig [1m/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig[0m23d81c3cba1fb941^87fb1c3cba1fb941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig0034a895dcffdf42^635"[1mCpResource[0m /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/max.xcconfig [1m/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources/max.xcconfig[0m    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/max.xcconfig /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/Resources36"B91A7D81-DD69-4567-A871-C41622FCEA10-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CCreateUniversalBinary /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun normal i386\ x86_64
+s421509692.420228
+e421509692.423634
+r1
+xCreateUniversalBinary
+x/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun
+xnormal
+xi386 x86_64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Create universal binary /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun142"[1mCreateUniversalBinary[0m [1m/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun[0m normal i386\ x86_6484a06b3cba1fb941^da746c3cba1fb941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun0034a895dcffdf42^693"[1mCreateUniversalBinary[0m [1m/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun[0m normal i386\ x86_64    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun -output /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo/Contents/MacOS/bc.virfun36"E134F73A-E47B-48B4-B38A-194952CFECBA-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CLd /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun normal i386
+s421509692.393296
+e421509692.419662
+r1
+xLd
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun
+xnormal
+xi386
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/bundle1.o
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libgcc_s.10.5.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdnsinfo.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libmathCommon.A.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection143"Link /Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun101"[1mLd[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun normal i3866abc643cba1fb941^e36f6b3cba1fb941^---0#0#1#--1281"[1mLd[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun normal i386    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    export MACOSX_DEPLOYMENT_TARGET=10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -filelist /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun.LinkFileList -mmacosx-version-min=10.5 @/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/c74_linker_flags.txt -Xlinker -dependency_info -Xlinker /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun_dependency_info.dat -o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/i386/bc.virfun36"B0CBA20D-71EC-48D4-8588-DF2FC3526B29-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CLd /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun normal x86_64
+s421509692.393426
+e421509692.419665
+r1
+xLd
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun
+xnormal
+xx86_64
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/bundle1.o
+d/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libgcc_s.10.5.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdnsinfo.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libmathCommon.A.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Link /Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun105"[1mLd[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun normal x86_6487c1643cba1fb941^fb796b3cba1fb941^---0#0#1#--1293"[1mLd[0m build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun normal x86_64    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    export MACOSX_DEPLOYMENT_TARGET=10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default -F/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes -filelist /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun.LinkFileList -mmacosx-version-min=10.5 @/Users/BenCello/Documents/Max/MaxSDK-6.1.4/c74support/max-includes/c74_linker_flags.txt -Xlinker -dependency_info -Xlinker /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun_dependency_info.dat -o /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/bc.virfun.build/Default/max-external.build/Objects-normal/x86_64/bc.virfun36"8AB1F220-830B-47CD-A31C-41DAC9DAB994-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CSymLink /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default/bc.virfun.mxo /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+s421509692.108310
+e421509692.112123
+r1
+xSymLink
+x/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/Default/bc.virfun.mxo
+x/Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Process /Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun/build/Default/bc.virfun.mxo103"[1mSymLink[0m build/Default/bc.virfun.mxo /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxoc4cf1b3cba1fb941^24b51c3cba1fb941^---0#0#1#--339"[1mSymLink[0m build/Default/bc.virfun.mxo /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo    cd "/Users/BenCello/Projects/OMax/OMax5/src/yin+ & co/bc.virfun"    /bin/ln -sf /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo /Users/BenCello/Projects/OMax/OMax5/src/yin+\ &\ co/bc.virfun/build/Default/bc.virfun.mxo36"A97E9D41-11E7-4EE3-9B05-5382C840DED9-
+b00533E95-AACB-47D3-A25E-D18D0BCEE4CE
+
+CTouch /Users/BenCello/Projects/OMax/OMax5/src/build/bc.virfun.mxo
+r0
+
