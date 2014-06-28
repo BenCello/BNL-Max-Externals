@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B186AAA128751F7000A07FB /* max.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7B186AA9128751F7000A07FB /* max.xcconfig */; };
 		7BA4379910FB74950093DEB8 /* bc.yinstats.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4379810FB74950093DEB8 /* bc.yinstats.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2FBBEAE508F335360078DB84 /* bc.yinstats.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bc.yinstats.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B186AA9128751F7000A07FB /* max.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = max.xcconfig; path = ../max.xcconfig; sourceTree = SOURCE_ROOT; };
+		50310E7A195F177A00F27EEA /* max.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = max.xcconfig; sourceTree = "<group>"; };
 		7BA4379810FB74950093DEB8 /* bc.yinstats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.yinstats.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,7 +30,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				7B186AA9128751F7000A07FB /* max.xcconfig */,
+				50310E7A195F177A00F27EEA /* max.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -117,7 +116,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B186AAA128751F7000A07FB /* max.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +145,7 @@
 /* Begin XCBuildConfiguration section */
 		2FBBEAD008F335010078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B186AA9128751F7000A07FB /* max.xcconfig */;
+			baseConfigurationReference = 50310E7A195F177A00F27EEA /* max.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;

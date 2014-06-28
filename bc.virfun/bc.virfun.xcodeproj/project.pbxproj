@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B186A8F12875167000A07FB /* max.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7B186A8E12875167000A07FB /* max.xcconfig */; };
+		50FC6991195F1BB700DDDA28 /* max.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 50FC6990195F1BB700DDDA28 /* max.xcconfig */; };
 		7B64664E125F2406003ABC96 /* bc.virfun.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B64664D125F2406003ABC96 /* bc.virfun.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B186A8E12875167000A07FB /* max.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = max.xcconfig; path = ../max.xcconfig; sourceTree = SOURCE_ROOT; };
+		50FC6990195F1BB700DDDA28 /* max.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = max.xcconfig; sourceTree = "<group>"; };
 		7B4B731B1222DB8400D57FEA /* bc.virfun.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bc.virfun.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64664D125F2406003ABC96 /* bc.virfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.virfun.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,7 +31,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				7B186A8E12875167000A07FB /* max.xcconfig */,
+				50FC6990195F1BB700DDDA28 /* max.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -117,7 +117,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B186A8F12875167000A07FB /* max.xcconfig in Resources */,
+				50FC6991195F1BB700DDDA28 /* max.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +147,7 @@
 /* Begin XCBuildConfiguration section */
 		2FBBEAD008F335010078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B186A8E12875167000A07FB /* max.xcconfig */;
+			baseConfigurationReference = 50FC6990195F1BB700DDDA28 /* max.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;
