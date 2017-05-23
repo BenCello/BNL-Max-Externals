@@ -17,7 +17,7 @@ INSTALL_PATH = /
 
 // Special Files
 GCC_PREFIX_HEADER = $(C74SUPPORT)/max-includes/macho-prefix.pch
-INFOPLIST_FILE = $(SRCROOT)/Info.plist
+INFOPLIST_FILE = $(SRCROOT)/../bnl.Info.plist
 
 
 // Architecture and Deployment

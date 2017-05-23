@@ -11,9 +11,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B3F5B691ED48C4300E33FEA /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 		7B4B731B1222DB8400D57FEA /* bc.virfun.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bc.virfun.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64664D125F2406003ABC96 /* bc.virfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.virfun.c; sourceTree = "<group>"; };
+		7B65193E1ED48E5000DC8FA3 /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = bnl.maxsdk.xcconfig; path = ../bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +30,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				7B3F5B691ED48C4300E33FEA /* bnl.maxsdk.xcconfig */,
+				7B65193E1ED48E5000DC8FA3 /* bnl.maxsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -151,7 +151,7 @@
 		};
 		2FBBEAE108F335360078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B3F5B691ED48C4300E33FEA /* bnl.maxsdk.xcconfig */;
+			baseConfigurationReference = 7B65193E1ED48E5000DC8FA3 /* bnl.maxsdk.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;

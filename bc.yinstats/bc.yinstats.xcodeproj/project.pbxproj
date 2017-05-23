@@ -12,8 +12,8 @@
 
 /* Begin PBXFileReference section */
 		2FBBEAE508F335360078DB84 /* .bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 		7BA4379810FB74950093DEB8 /* bc.yinstats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.yinstats.c; sourceTree = "<group>"; };
+		7BAA0ED51ED48EBD00557C8D /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = bnl.maxsdk.xcconfig; path = ../bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +30,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */,
+				7BAA0ED51ED48EBD00557C8D /* bnl.maxsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -151,7 +151,7 @@
 		};
 		2FBBEAE108F335360078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */;
+			baseConfigurationReference = 7BAA0ED51ED48EBD00557C8D /* bnl.maxsdk.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;
