@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A47D5B16140FC5A600B58CF4 /* large.c in Sources */ = {isa = PBXBuildFile; fileRef = A47D5B15140FC5A600B58CF4 /* large.c */; };
-		A47D5B18140FC5B900B58CF4 /* large.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A47D5B17140FC5B900B58CF4 /* large.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2FBBEAE508F335360078DB84 /* tempo.large.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tempo.large.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAA0ED61ED48F9600557C8D /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = bnl.maxsdk.xcconfig; path = ../bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 		A47D5B15140FC5A600B58CF4 /* large.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = large.c; sourceTree = "<group>"; };
-		A47D5B17140FC5B900B58CF4 /* large.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = large.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +30,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				A47D5B17140FC5B900B58CF4 /* large.xcconfig */,
+				7BAA0ED61ED48F9600557C8D /* bnl.maxsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -93,7 +92,7 @@
 			isa = PBXProject;
 			attributes = {
 			};
-			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "large" */;
+			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "tempo.large" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -114,7 +113,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47D5B18140FC5B900B58CF4 /* large.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +142,6 @@
 /* Begin XCBuildConfiguration section */
 		2FBBEAD008F335010078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47D5B17140FC5B900B58CF4 /* large.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
@@ -152,7 +149,6 @@
 		};
 		2FBBEAD108F335010078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47D5B17140FC5B900B58CF4 /* large.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
@@ -160,22 +156,24 @@
 		};
 		2FBBEAE108F335360078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47D5B17140FC5B900B58CF4 /* large.xcconfig */;
+			baseConfigurationReference = 7BAA0ED61ED48F9600557C8D /* bnl.maxsdk.xcconfig */;
 			buildSettings = {
+				PRODUCT_NAME = tempo.large;
 			};
 			name = Development;
 		};
 		2FBBEAE208F335360078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47D5B17140FC5B900B58CF4 /* large.xcconfig */;
+			baseConfigurationReference = 7BAA0ED61ED48F9600557C8D /* bnl.maxsdk.xcconfig */;
 			buildSettings = {
+				PRODUCT_NAME = tempo.large;
 			};
 			name = Deployment;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "large" */ = {
+		2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "tempo.large" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FBBEAD008F335010078DB84 /* Development */,

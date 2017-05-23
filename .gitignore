@@ -1,25 +1,23 @@
-/bc.virfun/bc.virfun.xcodeproj/xcuserdata
-/bc.yinstats/bc.yinstats.xcodeproj/xcuserdata
-/Tempo/large.xcodeproj/xcshareddata
-/Tempo/large.xcodeproj/xcuserdata
-/Tempo/toiviainen.xcodeproj/xcuserdata
 
-/.DS_Store
-/bc.virfun/.DS_Store
-/bc.yinstats/.DS_Store
-/build/.DS_Store
-/Tempo/.DS_Store
+# Created by https://www.gitignore.io/api/macos
 
-/build/tempo.large.mxo
+### macOS ###
+*.DS_Store
 
-/bc.virfun/bc.virfun.xcodeproj/project.xcworkspace/xcshareddata
-/bc.virfun/bc.virfun.xcodeproj/project.xcworkspace/xcuserdata
-/bc.yinstats/bc.yinstats.xcodeproj/project.xcworkspace/xcuserdata
-/Tempo/large.xcodeproj/project.xcworkspace/xcuserdata
-/Tempo/toiviainen.xcodeproj/project.xcworkspace/xcuserdata
+# Created by https://www.gitignore.io/api/xcode
 
-/bc.virfun/build
-/bc.yinstats/build
+## Build generated
+build/
+DerivedData/
 
-/build
-/Icon
+## Various settings
+xcuserdata/
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+Icon

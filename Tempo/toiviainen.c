@@ -65,7 +65,7 @@ static t_class *toiviainen_class;
 
 ////////////////////////// standard API functions
 
-int main(void)
+int C74_EXPORT main(void)
 {	
 	t_class *c;
 	

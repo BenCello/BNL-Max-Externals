@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:large.xcodeproj">
+      location = "self:/Users/blevy/Documents/Max 7/bnl.externals/tempo/tempo.toiviainen.xcodeproj">
    </FileRef>
 </Workspace>
