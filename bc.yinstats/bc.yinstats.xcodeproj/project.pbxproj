@@ -11,8 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2FBBEAE508F335360078DB84 /* bc.yinstats.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bc.yinstats.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
-		50310E7A195F177A00F27EEA /* max.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = max.xcconfig; sourceTree = "<group>"; };
+		2FBBEAE508F335360078DB84 /* .bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = bnl.maxsdk.xcconfig; sourceTree = "<group>"; };
 		7BA4379810FB74950093DEB8 /* bc.yinstats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.yinstats.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -30,7 +30,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				50310E7A195F177A00F27EEA /* max.xcconfig */,
+				7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 			);
@@ -48,7 +48,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FBBEAE508F335360078DB84 /* bc.yinstats.mxo */,
+				2FBBEAE508F335360078DB84 /* .bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 			);
 			name = "max-external";
 			productName = iterator;
-			productReference = 2FBBEAE508F335360078DB84 /* bc.yinstats.mxo */;
+			productReference = 2FBBEAE508F335360078DB84 /* .bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -145,13 +145,13 @@
 /* Begin XCBuildConfiguration section */
 		2FBBEAD008F335010078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50310E7A195F177A00F27EEA /* max.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;
 		};
 		2FBBEAE108F335360078DB84 /* Default */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B3F5B6A1ED48CD900E33FEA /* bnl.maxsdk.xcconfig */;
 			buildSettings = {
 			};
 			name = Default;
