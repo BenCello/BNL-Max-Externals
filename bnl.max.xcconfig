@@ -5,7 +5,7 @@ PRODUCT_NAME = $(PROJECT_NAME)
 // Paths
 //MAX_SDK = ~/Max5/MaxSDK-5.1.7
 //MAX_SDK = ~/Max6/MaxSDK-6.0.4
-MAX_SDK = /Users/blevy/Documents/Max 7/max-sdk-7.3.3
+MAX_SDK = /Users/blevy/Documents/Max 8/max-sdk-8.0.3
 C74SUPPORT = $(MAX_SDK)/source/c74support
 HEADER_SEARCH_PATHS = "$(C74SUPPORT)/max-includes"
 FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes"
@@ -54,7 +54,7 @@ GENERATE_PKGINFO_FILE = YES
 
 // Flags to enforce some build-time checks for the symbols used while not actually performing a hard link
 C74_SYM_LINKER_FLAGS = "@$(C74SUPPORT)/max-includes/c74_linker_flags.txt"
-OTHER_LDFLAGS= $(C74_SYM_LINKER_FLAGS) //-framework MaxAudioAPI
+OTHER_LDFLAGS= $(C74_SYM_LINKER_FLAGS) //-framework MaxAudioAPI -framework JitterAPI
 
 
 // hide all symbols by default
