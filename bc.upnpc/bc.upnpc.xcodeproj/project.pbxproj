@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B18EA5424728D56003939C4 /* bc.upnpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B18EA5324728D56003939C4 /* bc.upnpc.c */; };
+		7B18EA56247293EF003939C4 /* bnl.max.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7B18EA55247293EF003939C4 /* bnl.max.xcconfig */; };
+		7B6E45292475371900E5ECAF /* upnperrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6E45282475371900E5ECAF /* upnperrors.h */; };
+		7B9EEDCA2474353D007DE7E4 /* listdevices.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B9EEDC92474353D007DE7E4 /* listdevices.c */; };
+		7BB794C224729CDD00328866 /* miniupnpc_declspec.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB794C124729CDD00328866 /* miniupnpc_declspec.h */; };
+		7BB794C424729CFF00328866 /* miniupnpctypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB794C324729CFF00328866 /* miniupnpctypes.h */; };
+		7BB794CE2472A3D600328866 /* upnpcommands.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB794CD2472A3D600328866 /* upnpcommands.h */; };
+		7BB794D32472A83700328866 /* libminiupnpc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB794D22472A83700328866 /* libminiupnpc.dylib */; };
+		7BB794D42472A83F00328866 /* libminiupnpc.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB794D22472A83700328866 /* libminiupnpc.dylib */; };
+		7BB794D72472C60700328866 /* miniupnpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB794D62472C60700328866 /* miniupnpc.h */; };
+		7BB794DB2472C69000328866 /* igd_desc_parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BB794DA2472C69000328866 /* igd_desc_parse.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2FBBEAE508F335360078DB84 /* bc.upnpc.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bc.upnpc.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B18EA5324728D56003939C4 /* bc.upnpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bc.upnpc.c; sourceTree = "<group>"; };
+		7B18EA55247293EF003939C4 /* bnl.max.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = bnl.max.xcconfig; path = ../bnl.max.xcconfig; sourceTree = "<group>"; };
+		7B6E45282475371900E5ECAF /* upnperrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnperrors.h; path = "miniupnpc-2.1.20191224/upnperrors.h"; sourceTree = SOURCE_ROOT; };
+		7B9EEDC92474353D007DE7E4 /* listdevices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = listdevices.c; path = "miniupnpc-2.1.20191224/listdevices.c"; sourceTree = SOURCE_ROOT; };
+		7BB794C124729CDD00328866 /* miniupnpc_declspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = miniupnpc_declspec.h; path = "miniupnpc-2.1.20191224/miniupnpc_declspec.h"; sourceTree = SOURCE_ROOT; };
+		7BB794C324729CFF00328866 /* miniupnpctypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = miniupnpctypes.h; path = "miniupnpc-2.1.20191224/miniupnpctypes.h"; sourceTree = SOURCE_ROOT; };
+		7BB794CD2472A3D600328866 /* upnpcommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = upnpcommands.h; path = "miniupnpc-2.1.20191224/upnpcommands.h"; sourceTree = SOURCE_ROOT; };
+		7BB794D22472A83700328866 /* libminiupnpc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libminiupnpc.dylib; path = "miniupnpc-2.1.20191224/libminiupnpc.dylib"; sourceTree = SOURCE_ROOT; };
+		7BB794D62472C60700328866 /* miniupnpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = miniupnpc.h; path = "miniupnpc-2.1.20191224/miniupnpc.h"; sourceTree = SOURCE_ROOT; };
+		7BB794DA2472C69000328866 /* igd_desc_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = igd_desc_parse.h; path = "miniupnpc-2.1.20191224/igd_desc_parse.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FBBEADC08F335360078DB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB794D32472A83700328866 /* libminiupnpc.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* iterator */ = {
+			isa = PBXGroup;
+			children = (
+				7B18EA55247293EF003939C4 /* bnl.max.xcconfig */,
+				7B18EA5324728D56003939C4 /* bc.upnpc.c */,
+				7BB794C024729CA200328866 /* miniUPnP */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = iterator;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FBBEAE508F335360078DB84 /* bc.upnpc.mxo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB794C024729CA200328866 /* miniUPnP */ = {
+			isa = PBXGroup;
+			children = (
+				7B9EEDC92474353D007DE7E4 /* listdevices.c */,
+				7BB794DA2472C69000328866 /* igd_desc_parse.h */,
+				7B6E45282475371900E5ECAF /* upnperrors.h */,
+				7BB794D62472C60700328866 /* miniupnpc.h */,
+				7BB794C324729CFF00328866 /* miniupnpctypes.h */,
+				7BB794C124729CDD00328866 /* miniupnpc_declspec.h */,
+				7BB794CD2472A3D600328866 /* upnpcommands.h */,
+				7BB794D22472A83700328866 /* libminiupnpc.dylib */,
+			);
+			path = miniUPnP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2FBBEAD708F335360078DB84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB794DB2472C69000328866 /* igd_desc_parse.h in Headers */,
+				7BB794D72472C60700328866 /* miniupnpc.h in Headers */,
+				7B6E45292475371900E5ECAF /* upnperrors.h in Headers */,
+				7BB794CE2472A3D600328866 /* upnpcommands.h in Headers */,
+				7BB794C424729CFF00328866 /* miniupnpctypes.h in Headers */,
+				7BB794C224729CDD00328866 /* miniupnpc_declspec.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2FBBEAD608F335360078DB84 /* max-external */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FBBEAE008F335360078DB84 /* Build configuration list for PBXNativeTarget "max-external" */;
+			buildPhases = (
+				2FBBEAD708F335360078DB84 /* Headers */,
+				2FBBEAD808F335360078DB84 /* Resources */,
+				2FBBEADA08F335360078DB84 /* Sources */,
+				2FBBEADC08F335360078DB84 /* Frameworks */,
+				2FBBEADF08F335360078DB84 /* Rez */,
+				7BB794D52472C1B300328866 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "max-external";
+			productName = iterator;
+			productReference = 2FBBEAE508F335360078DB84 /* bc.upnpc.mxo */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "bc.upnpc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* iterator */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FBBEAD608F335360078DB84 /* max-external */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FBBEAD808F335360078DB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B18EA56247293EF003939C4 /* bnl.max.xcconfig in Resources */,
+				7BB794D42472A83F00328866 /* libminiupnpc.dylib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		2FBBEADF08F335360078DB84 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BB794D52472C1B300328866 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change \"/usr/lib/libminiupnpc.17.dylib\" \"@loader_path/../Resources/libminiupnpc.dylib\" \"${DSTROOT}/bc.upnpc.mxo/Contents/MacOS/bc.upnpc\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FBBEADA08F335360078DB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B18EA5424728D56003939C4 /* bc.upnpc.c in Sources */,
+				7B9EEDCA2474353D007DE7E4 /* listdevices.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2FBBEAD008F335010078DB84 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		2FBBEAD108F335010078DB84 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		2FBBEAE108F335360078DB84 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B18EA55247293EF003939C4 /* bnl.max.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/miniupnpc-2.1.20191224",
+				);
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Development;
+		};
+		2FBBEAE208F335360078DB84 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B18EA55247293EF003939C4 /* bnl.max.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/miniupnpc-2.1.20191224",
+				);
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "bc.upnpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FBBEAD008F335010078DB84 /* Development */,
+				2FBBEAD108F335010078DB84 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		2FBBEAE008F335360078DB84 /* Build configuration list for PBXNativeTarget "max-external" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FBBEAE108F335360078DB84 /* Development */,
+				2FBBEAE208F335360078DB84 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

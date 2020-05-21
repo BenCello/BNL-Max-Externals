@@ -20,4 +20,6 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-Icon
+IDEWorkspaceChecks.plist
+
+Icon
