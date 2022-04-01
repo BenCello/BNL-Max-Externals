@@ -1,7 +1,7 @@
 *.xcodeproj
 *.build
-
 build
+*notari*.zsh
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,macos,cmake
