@@ -1,10 +1,10 @@
-set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../build")
+set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../externals")
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 
 string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
 project(${THIS_FOLDER_NAME})
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
+include(~/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
 #############################################################
 # MAX EXTERNAL
@@ -27,4 +27,4 @@ add_library(
 	${PROJECT_SRC}
 )
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
+include(~/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
