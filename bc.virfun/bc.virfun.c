@@ -10,6 +10,8 @@
 
 #include "ext.h"				// standard Max include, always required
 #include "ext_obex.h"			// required for new style Max object
+#include "ext_systhread.h"      // thread mechanisms
+#include "ext_sysparallel.h"    // parallel tasking
 
 #include <stdlib.h>
 #include <math.h>
@@ -24,12 +26,17 @@
 typedef struct _bc_virfun 
 {
 	t_object	ob;			///< Pointer to the object itself
+    t_sysparallel_task  *th_compute;    ///< thread reference to compute
+    t_systhread_mutex   mutex;      ///< mutual exclusion lock for threadsafety
+    bool        f_done;     ///< Flag for termination of the recursion
 	long		a_mode;		///< Mode attribute
 	float		a_approx;	///< Approximation attribute
 //	float		approx;		///< Approximation factor (MIDI)
 	float		approxf;	///< Approximation factor (Hz)
-	float*		freqs;		///< Frequencies array
-	short		freqnb;		///< Size of currently allocated array
+    double*		freqs;		///< Frequencies array
+    long        nbfreqs;    ///< Number of frequencies in the array
+	long		freqnb;		///< Size of currently allocated array
+    double       o_virfun;   ///< Virfun value to output
 	void		*out;		///< Outlet 0 (Virtual Fundamental)
 } t_bc_virfun;
 
@@ -46,14 +53,18 @@ void bc_virfun_assist(t_bc_virfun *x, void *b, long m, long a, char *s);
 void bc_virfun_int(t_bc_virfun *x, long n);
 void bc_virfun_float(t_bc_virfun *x, double f);
 void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av);
+void bc_virfun_do(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av);
 
 t_max_err bc_virfun_approx(t_bc_virfun *x, void *attr , long ac, t_atom *av);
 
 // Internal routines
-float rec_virfun(float* freqs, float* end, float divmin, float divmax, float approx);
+double rec_virfun(double* freqs, double* end, double divmin, double divmax, double approx);
 float midi2freq_approx(float midi);
 float midi2freq(float midin);
 float freq2midi(float freqin);
+
+// Thread routines
+void *threaded_rec_virfun(t_sysparallel_worker *w);
 
 // Global class pointer variable
 t_class *bc_virfun_class;
@@ -115,24 +126,30 @@ void *bc_virfun_new(t_symbol *s, long argc, t_atom *argv)
 	{
 		// outlets
 		x->out = intout(x);
+            
+        if (argc)
+        {
+            if ((argv)->a_type == A_LONG)
+                x->a_approx=(float)atom_getlong(argv);
+            else if ((argv)->a_type == A_FLOAT)
+                x->a_approx=atom_getfloat(argv);
+            else
+                x->a_approx = 0.5;
+        }
+        else
+            x->a_approx = 0.5;
+        x->approxf=midi2freq_approx(x->a_approx);
         
-	if (argc)
-	{
-		if ((argv)->a_type == A_LONG)
-			x->a_approx=(float)atom_getlong(argv);
-		else if ((argv)->a_type == A_FLOAT)
-			x->a_approx=atom_getfloat(argv);
-		else
-			x->a_approx = 0.5;
-	}
-	else
-		x->a_approx = 0.5;
-	x->approxf=midi2freq_approx(x->a_approx);
-	x->freqnb=0;
-	x->freqs=NULL;
-	
-	// process attr args, if any
-	attr_args_process(x, argc, argv);
+        x->freqnb=0;
+        x->freqs=NULL;
+        x->f_done = true;
+        
+        // process attr args, if any
+        attr_args_process(x, argc, argv);
+            
+        // initialize thread elements
+        x->th_compute = NULL;
+        systhread_mutex_new(&x->mutex,0);
 	
     }
 	return (x);
@@ -142,7 +159,12 @@ void *bc_virfun_new(t_symbol *s, long argc, t_atom *argv)
  * @brief Object destruction */
 void bc_virfun_free(t_bc_virfun *x)
 {
-	;
+    if (x->th_compute)
+        object_free((t_object *)x->th_compute);
+
+    // free our mutex
+    if (x->mutex)
+        systhread_mutex_free(x->mutex);
 }
 
 
@@ -179,18 +201,28 @@ void bc_virfun_assist(t_bc_virfun *x, void *b, long io, long index, char *s)
 ///@name Input/Output routines
 //@{
 
-/**@memberof t_bc_virfun
- * @brief Compute and return the virtual fondamental*/
 void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
 {
+    if (x->f_done) {
+        defer(x,(method)bc_virfun_do,s,ac,av);
+    } else {
+        object_warn((t_object *)x, "bc.virfun is still busy computing...");
+    }
+}
+
+/**@memberof t_bc_virfun
+ * @brief Compute and return the virtual fondamental*/
+void bc_virfun_do(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
+{
 	int i;
-	float virfun;
-	if (x->freqnb<ac)
+    double virfun = 0.;
+    x->nbfreqs = ac;
+	if (x->freqnb<x->nbfreqs)
 	{
 		if (x->freqs)
 			free(x->freqs);
-		x->freqs=(float*)malloc(ac*sizeof(float));
-		x->freqnb=ac;
+		x->freqs=(double*)malloc(x->nbfreqs*sizeof(double));
+		x->freqnb=x->nbfreqs;
 	}
 	
 	if (x->a_mode)
@@ -204,8 +236,24 @@ void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
 			else
 				object_error((t_object*)x, "wrong argument type");
 		}
-		virfun = rec_virfun(x->freqs, x->freqs+ac, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
-		outlet_float(x->out, (round(freq2midi(virfun)/x->a_approx))*x->a_approx);
+        // Unthreaded version
+		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
+        
+        // Threaded version
+        if (x->th_compute == NULL) {
+            x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
+            x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
+        }
+        x->f_done = false;
+        sysparallel_task_execute(x->th_compute);
+        
+        systhread_mutex_lock(x->mutex);
+        virfun = x->o_virfun;  // shared data
+        systhread_mutex_unlock(x->mutex);
+        
+        // Output
+        outlet_float(x->out, (round(freq2midi(virfun)/x->a_approx))*x->a_approx);
+        x->f_done = true;
 	}
 	else
 	{
@@ -218,8 +266,24 @@ void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
 			else
 				object_error((t_object*)x, "wrong argument type");
 		}
-		virfun = rec_virfun(x->freqs, x->freqs+ac, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
-		outlet_float(x->out, virfun);
+        // Unthreaded version
+		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
+        
+        // Threaded version
+        if (x->th_compute == NULL) {
+            x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
+            x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
+        }
+        x->f_done = false;
+        sysparallel_task_execute(x->th_compute);
+        
+        systhread_mutex_lock(x->mutex);
+        virfun = x->o_virfun;  // shared data
+        systhread_mutex_unlock(x->mutex);
+        
+        // Output
+        outlet_float(x->out, virfun);
+        x->f_done = true;
 	}
  }
 
@@ -269,18 +333,17 @@ t_max_err bc_virfun_approx(t_bc_virfun *x, void *attr , long ac, t_atom *av)
 
 /**@memberof t_bc_virfun
  * @brief Recursive function to compute virtual fundamentals*/
-float rec_virfun(float* freqs, float* end, float divmin, float divmax, float approx)
+double rec_virfun(double* freqs, double* end, double divmin, double divmax, double approx)
 {
-	float inf,sup;
-	float quo_min, quo_max;
-	float quotient;
-	float resu = 0;
+    double inf,sup;
+    double quo_min, quo_max;
+    double quotient;
+    double resu = 0.0;
 	if (divmin <= divmax)
 	{
-		if (freqs==end)
-			return((divmin + divmax) / 2.);
-		else
-		{
+		if (freqs==end) {
+            return((divmin + divmax) / 2.);
+        } else {
 			sup = freqs[0] * (1 + approx);
 			inf = freqs[0] / (1 + approx);
 			quo_min = ceil(inf/divmax);
@@ -288,8 +351,8 @@ float rec_virfun(float* freqs, float* end, float divmin, float divmax, float app
 			quotient = quo_min;
 			while (quotient <= quo_max)
 			{
-				resu = rec_virfun(freqs+1,end, max(inf/quotient, divmin), min(sup/quotient, divmax), approx);
-				if ((int)resu)
+				resu = rec_virfun(&freqs[1],end, max(inf/quotient, divmin), min(sup/quotient, divmax), approx);
+				if (resu > 1.)
 					return resu;
 				quotient++;
 			}
@@ -318,6 +381,23 @@ float freq2midi(float freqin)
 float midi2freq(float midin)
 {
 	return 440.*pow(2, (midin-69.)/12.);
+}
+
+/**@memberof t_bc_virfun
+ * @brief Execute the recursive algorithm in another thread*/
+void *threaded_rec_virfun(t_sysparallel_worker *w)
+{
+    t_bc_virfun *x = (t_bc_virfun *)w->data;
+    float virfun;
+    
+    virfun = rec_virfun(x->freqs, &x->freqs[x->nbfreqs-1], 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
+    
+    // Set the output value
+    systhread_mutex_lock(x->mutex);
+    x->o_virfun = virfun;  // shared data
+    systhread_mutex_unlock(x->mutex);
+    
+    return NULL;
 }
 
 //@}
