@@ -70,6 +70,8 @@ xcuserdata/
 
 # BL manual ignores
 **/*.mxo
+**/*.mxe
+**/*.mxe64
 **/*.xcodeproj
 **/*.dmg
 **/*.build

@@ -20,10 +20,10 @@ include_directories(
 )
 
 find_library (
-    MINIUPNPC
-    libminiupnpc.dylib
-    HINTS "miniupnp/miniupnpc" "miniupnp/miniupnpc/build"
-    NO_DEFAULT_PATH
+   MINIUPNPC
+   miniupnpc
+   HINTS "miniupnp/miniupnpc/build" "miniupnp/miniupnpc/build/Debug" "miniupnp/miniupnpc/build/Release"
+   NO_DEFAULT_PATH
 )
 
 file(GLOB PROJECT_SRC
@@ -33,11 +33,22 @@ file(GLOB PROJECT_SRC
      "miniupnp/miniupnpc/include/*.h"
      "miniupnp/miniupnpc/src/listdevices.c"
 )
+
 add_library( 
 	${PROJECT_NAME} 
 	MODULE
 	${PROJECT_SRC}
 )
+
+if (WIN32)
+	if(MSVC)
+		#find_library(WS2_32 ws2_32.lib)
+		#cmake_print_variables(WS2_32)
+		target_link_libraries(${PROJECT_NAME} PUBLIC ws2_32.lib iphlpapi.lib)
+	else()
+		target_link_libraries(${PROJECT_NAME} PUBLIC ws2_32 iphlpapi)
+	endif()
+endif ()
 
 target_link_libraries(
 	${PROJECT_NAME}
