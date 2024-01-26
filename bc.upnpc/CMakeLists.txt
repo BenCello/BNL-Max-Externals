@@ -21,8 +21,12 @@ include_directories(
 
 find_library (
    MINIUPNPC
-   miniupnpc
-   HINTS "miniupnp/miniupnpc/build" "miniupnp/miniupnpc/build/Debug" "miniupnp/miniupnpc/build/Release"
+   if (APPLE)
+   	libminiupnpc.dylib
+   else if(WIN32)
+		miniupnpc
+	endif ()
+   HINTS "miniupnp/miniupnpc" "miniupnp/miniupnpc/build" "miniupnp/miniupnpc/build/Debug" "miniupnp/miniupnpc/build/Release"
    NO_DEFAULT_PATH
 )
 
