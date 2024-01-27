@@ -76,3 +76,4 @@ xcuserdata/
 **/*.dmg
 **/*.build
 **/build
+**/*.dylib
