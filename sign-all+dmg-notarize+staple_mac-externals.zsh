@@ -9,10 +9,10 @@ sudo xattr -r -d com.apple.quarantine $(find './mac_externals' -d 1 -iname '*.mx
 codesign --deep --timestamp --force -s "Developer ID Application: Benjamin Levy (8RBSER49GJ)" $(find './mac_externals' -d 1 -iname '*.mxo')
 
 # create dmg with the externals
-hdiutil create ./bnl-externals.notarized.dmg -fs HFS+ -srcfolder ./mac_externals -ov
+hdiutil create ./bc-externals.notarized.dmg -fs HFS+ -srcfolder ./mac_externals -ov
 # notarize & staple dmg
-xcrun notarytool submit ./bnl-externals.notarized.dmg --keychain-profile "AppleDev_Notarize_BLevy" --wait
-xcrun stapler staple ./bnl-externals.notarized.dmg
+xcrun notarytool submit ./bc-externals.notarized.dmg --keychain-profile "AppleDev_Notarize_BLevy" --wait
+xcrun stapler staple ./bc-externals.notarized.dmg
 
 # cleanup
 mv $(find './mac_externals' -d 1 -iname '*') './externals'
