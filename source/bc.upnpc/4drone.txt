@@ -1,0 +1,5 @@
+Windows
+=======
+cmake -B build .
+cmake --build build --config Release
+Copy-Item .\build\bc.upnpc\miniupnp\miniupnpc\Debug\miniupnpc.dll -Destination ..\support\
