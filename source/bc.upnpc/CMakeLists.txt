@@ -44,7 +44,7 @@ add_dependencies(${PROJECT_NAME} libminiupnpc-shared)
 if (APPLE)
 	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/libminiupnpc.dylib)
 elseif(WIN32)
-	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/miniupnpc)
+	set(MINIUPNPC ${CMAKE_CURRENT_BINARY_DIR}/miniupnp/miniupnpc/$<CONFIG>/miniupnpc.lib)
 endif ()
 
 target_link_libraries(
