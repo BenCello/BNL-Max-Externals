@@ -1,19 +1,23 @@
-#set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../externals")
-string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
+cmake_minimum_required(VERSION 3.19)
 
+string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
 project(${THIS_FOLDER_NAME})
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
 #############
 # MINIUPNPC #
 #############
 
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals/bc.upnpc.mxo/Contents/Resources")
+
 add_subdirectory("miniupnp/miniupnpc")
 
 #############################################################
 # MAX EXTERNAL
 #############################################################
+set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals")
+include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
+
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 
 include_directories( 
@@ -42,7 +46,7 @@ add_library(
 add_dependencies(${PROJECT_NAME} libminiupnpc-shared)
 
 if (APPLE)
-	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/libminiupnpc.dylib)
+	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/${PROJECT_NAME}.mxo/Contents/Resources/libminiupnpc.dylib)
 elseif(WIN32)
 	set(MINIUPNPC ${CMAKE_CURRENT_BINARY_DIR}/miniupnp/miniupnpc/$<CONFIG>/miniupnpc.lib)
 endif ()
@@ -62,5 +66,10 @@ if (WIN32)
 		target_link_libraries(${PROJECT_NAME} PUBLIC ws2_32 iphlpapi)
 	endif()
 endif ()
+
+add_custom_command(TARGET ${PROJECT_NAME}
+    POST_BUILD COMMAND 
+    ${CMAKE_INSTALL_NAME_TOOL} -add_rpath "@loader_path/../Resources/"
+    $<TARGET_FILE:${PROJECT_NAME}>)
 
 include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
