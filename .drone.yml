@@ -11,5 +11,6 @@ steps:
   commands:
 # First, get all homebrew installed commands
   - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+  - cd source
   - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
   - cmake --build build --config Debug
