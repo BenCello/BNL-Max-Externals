@@ -1,0 +1,13 @@
+kind: pipeline
+type: exec
+name: Max externals Debug
+
+platform:
+  os: darwin
+  arch: amd64
+
+steps:
+- name: build
+  commands:
+  - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
+  - cmake --build build --config Debug
