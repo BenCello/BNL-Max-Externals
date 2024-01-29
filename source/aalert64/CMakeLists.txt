@@ -1,16 +1,18 @@
 if (APPLE) # [aalert] is a Mac only object
 
-#set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../externals")
-set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
+cmake_minimum_required(VERSION 3.19)
 
 string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
 project(${THIS_FOLDER_NAME})
 
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
-
 #############################################################
 # MAX EXTERNAL
 #############################################################
+
+set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
+set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals")
+
+include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
 include_directories( 
 	"${MAX_SDK_INCLUDES}"
