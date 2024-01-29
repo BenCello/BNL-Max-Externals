@@ -1,3 +1,5 @@
+if (APPLE) # [aalert] is a Mac only object
+
 #set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../externals")
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 
@@ -37,3 +39,5 @@ target_link_libraries(
 )
 
 include(~/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
+
+endif()
