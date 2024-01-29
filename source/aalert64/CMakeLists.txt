@@ -6,7 +6,7 @@ set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 string(REGEX REPLACE "(.*)/" "" THIS_FOLDER_NAME "${CMAKE_CURRENT_SOURCE_DIR}")
 project(${THIS_FOLDER_NAME})
 
-include(~/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
+include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
 
 #############################################################
 # MAX EXTERNAL
@@ -38,6 +38,6 @@ target_link_libraries(
 	${CORE_FOUNDATION}
 )
 
-include(~/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
+include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
 
 endif()

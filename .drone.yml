@@ -10,6 +10,7 @@ steps:
 - name: build
   commands:
 # First, get all homebrew installed commands
+  - export HOME=/Users/$(whoami)
   - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   - cd source
   - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
