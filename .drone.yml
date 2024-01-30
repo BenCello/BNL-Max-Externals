@@ -32,6 +32,8 @@ platform:
 steps:
 - name: build
   environment:
+    MyPassword:
+      from_secret: MyPassword
     CerticateCommonName:
       from_secret: CerticateCommonName
     AppSpecificPasswordName:
@@ -46,4 +48,6 @@ steps:
   - cd source
   - cmake -B build . -DCMAKE_BUILD_TYPE=Release
   - cmake --build build --config Release
+# Unlock keychain
+  - security unlock-keychain -p $MyPassword login.keychain
   - ./sign-all+dmg-notarize+staple_mac-externals.zsh
