@@ -49,6 +49,7 @@ steps:
   - cmake -B build . -DCMAKE_BUILD_TYPE=Release
   - cmake --build build --config Release
 # Unlock keychain
+  - echo $(whoami)
   - echo $MyPassword | sudo -S su $(whoami)
-  - security unlock-keychain -p $MyPassword #$HOME/Library/Keychains/login.keychain
+  - security unlock-keychain -p $MyPassword $HOME/Library/Keychains/login.keychain
   - ./sign-all+dmg-notarize+staple_mac-externals.zsh
