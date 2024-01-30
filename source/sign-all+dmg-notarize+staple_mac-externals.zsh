@@ -1,7 +1,7 @@
 #! /bin/zsh -
 
-CerticateCommonName=""
-AppSpecificPasswordName=""
+#CerticateCommonName=""
+#AppSpecificPasswordName=""
 
 # remove existing dmg
 rm -f -- ../mac_externals.notarized.dmg
@@ -11,7 +11,7 @@ mkdir ../mac_externals
 mv $(find ../externals -d 1 -iname '*.mxo') '../mac_externals'
 
 # remove quarantine flag & codesign each external
-sudo xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
+#sudo xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
 codesign --deep --timestamp --force -s $CerticateCommonName $(find '../mac_externals' -d 1 -iname '*.mxo')
 
 # create dmg with the externals
