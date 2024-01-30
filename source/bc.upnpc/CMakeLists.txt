@@ -7,8 +7,13 @@ project(${THIS_FOLDER_NAME})
 # MINIUPNPC #
 #############
 
-set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals/bc.upnpc.mxo/Contents/Resources")
+if (APPLE)
+	set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
+	set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals/bc.upnpc.mxo/Contents/Resources")
+	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/${PROJECT_NAME}.mxo/Contents/Resources/libminiupnpc.dylib)
+elseif (WIN32)
+	set(MINIUPNPC ${CMAKE_CURRENT_BINARY_DIR}/miniupnp/miniupnpc/$<CONFIG>/miniupnpc.lib)
+endif ()
 
 add_subdirectory("miniupnp/miniupnpc")
 
@@ -45,12 +50,6 @@ add_library(
 
 add_dependencies(${PROJECT_NAME} libminiupnpc-shared)
 
-if (APPLE)
-	set(MINIUPNPC ${C74_LIBRARY_OUTPUT_DIRECTORY}/${PROJECT_NAME}.mxo/Contents/Resources/libminiupnpc.dylib)
-elseif(WIN32)
-	set(MINIUPNPC ${CMAKE_CURRENT_BINARY_DIR}/miniupnp/miniupnpc/$<CONFIG>/miniupnpc.lib)
-endif ()
-
 target_link_libraries(
 	${PROJECT_NAME}
 	PUBLIC
@@ -59,17 +58,15 @@ target_link_libraries(
 
 if (WIN32)
 	if(MSVC)
-		#find_library(WS2_32 ws2_32.lib)
-		#cmake_print_variables(WS2_32)
 		target_link_libraries(${PROJECT_NAME} PUBLIC ws2_32.lib iphlpapi.lib)
 	else()
 		target_link_libraries(${PROJECT_NAME} PUBLIC ws2_32 iphlpapi)
 	endif()
+elseif (APPLE)
+ 	add_custom_command(TARGET ${PROJECT_NAME}
+      POST_BUILD COMMAND 
+      ${CMAKE_INSTALL_NAME_TOOL} -add_rpath "@loader_path/../Resources/"
+      $<TARGET_FILE:${PROJECT_NAME}>)
 endif ()
-
-add_custom_command(TARGET ${PROJECT_NAME}
-    POST_BUILD COMMAND 
-    ${CMAKE_INSTALL_NAME_TOOL} -add_rpath "@loader_path/../Resources/"
-    $<TARGET_FILE:${PROJECT_NAME}>)
 
 include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
