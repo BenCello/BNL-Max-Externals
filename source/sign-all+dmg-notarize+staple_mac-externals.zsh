@@ -12,8 +12,8 @@ mv $(find ../externals -d 1 -iname '*.mxo') '../mac_externals'
 
 # remove quarantine flag & codesign each external
 echo $MyPassword | sudo -S xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
-security find-certificate -a -c $CerticateCommonName -Z $HOME/Library/Keychains/login.keychain
-#codesign --deep --timestamp --force --keychain $HOME/Library/Keychains/login.keychain -s $CerticateCommonName $(find '../mac_externals' -d 1 -iname '*.mxo')
+security find-certificate -a -c "$CerticateCommonName" -Z $HOME/Library/Keychains/login.keychain
+codesign --deep --timestamp --force --keychain $HOME/Library/Keychains/login.keychain -s "$CerticateCommonName" $(find '../mac_externals' -d 1 -iname '*.mxo')
 
 # create dmg with the externals
 #hdiutil create ../mac_externals.notarized.dmg -fs HFS+ -srcfolder ../mac_externals -ov
