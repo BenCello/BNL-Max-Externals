@@ -1,26 +1,30 @@
-#---
-#kind: pipeline
-#type: exec
-#name: Debug
-#
-#platform:
-#  os: darwin
-#  arch: amd64
-#
-#steps:
-#- name: build
-#  commands:
-## Get also miniupnp (submodule)
-#  - git submodule update --init --recursive
-## Set benjamin's home to have access to max-sdk
-#  - export HOME=/Users/$(whoami)
-## Get all homebrew installed commands (cmake)
-#  - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-#  - cd source
-#  - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
-#  - cmake --build build --config Debug
-#
-#---
+---
+kind: pipeline
+type: exec
+name: Debug
+
+platform:
+  os: darwin
+  arch: amd64
+
+steps:
+- name: submodules
+  commands:
+# Get also miniupnp (submodule)
+  - git submodule update --init --recursive
+
+- name: build
+  commands:
+# Set benjamin's home to have access to max-sdk
+  - export HOME=/Users/$(whoami)
+# Get all homebrew installed commands (cmake)
+  - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+  - cd source
+# Configure & build
+  - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
+  - cmake --build build --config Debug -j 8
+
+---
 kind: pipeline
 type: exec
 name: Release
@@ -44,7 +48,7 @@ steps:
   - cd source
 # Configure & build
   - cmake -B build . -DCMAKE_BUILD_TYPE=Release
-  - cmake --build build --config Release
+  - cmake --build build --config Release -j 8
 
 - name: sign
   environment:
