@@ -21,7 +21,7 @@ codesign --deep --timestamp --force --sign "$CerticateCommonName" $(find '../mac
 hdiutil create ../mac_externals.notarized.dmg -fs HFS+ -srcfolder ../mac_externals -ov
 # notarize & staple dmg
 #xcrun notarytool submit ../mac_externals.notarized.dmg --keychain-profile $AppSpecificPasswordName --wait
-xcrun notarytool submit ../mac_externals.notarized.dmg --password $AppSpecificPassword --wait
+xcrun notarytool submit ../mac_externals.notarized.dmg --apple-id $MyAppleID --team-id $MyAppleTeam --password $AppSpecificPassword --wait
 xcrun stapler staple ../mac_externals.notarized.dmg
 
 # cleanup

@@ -32,6 +32,10 @@ platform:
 steps:
 - name: build
   environment:
+    MyAppleTeam:
+      from_secret: MyAppleTeam
+    MyAppleID:
+      from_secret: MyAppleID
     MyPassword:
       from_secret: MyPassword
     CerticateCommonName:
