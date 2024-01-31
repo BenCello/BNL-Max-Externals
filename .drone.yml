@@ -55,4 +55,5 @@ steps:
     AppSpecificPassword:
       from_secret: AppSpecificPassword
   commands:
+  - cd source
   - ./sign-all+dmg-notarize+staple_mac-externals.zsh
