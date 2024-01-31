@@ -37,7 +37,7 @@ steps:
     CerticateCommonName:
       from_secret: CerticateCommonName
     AppSpecificPasswordName:
-      from_secret: AppSpecificPasswordName
+      from_secret: AppSpecificPassword
   commands:
 # Get also miniupnp (submodule)
   - git submodule update --init --recursive
