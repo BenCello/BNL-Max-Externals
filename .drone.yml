@@ -22,7 +22,7 @@ steps:
   - cd source
 # Configure & build
   - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
-  - cmake --build build --config Debug -j 8
+  - cmake --build build --config Debug -j 10
 
 ---
 kind: pipeline
@@ -48,7 +48,7 @@ steps:
   - cd source
 # Configure & build
   - cmake -B build . -DCMAKE_BUILD_TYPE=Release
-  - cmake --build build --config Release -j 8
+  - cmake --build build --config Release -j 10
 
 - name: sign
   environment:
