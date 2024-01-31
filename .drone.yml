@@ -36,7 +36,7 @@ steps:
       from_secret: MyPassword
     CerticateCommonName:
       from_secret: CerticateCommonName
-    AppSpecificPasswordName:
+    AppSpecificPassword:
       from_secret: AppSpecificPassword
   commands:
 # Get also miniupnp (submodule)
