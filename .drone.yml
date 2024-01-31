@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: exec
-name: Debug
+name: macOS Debug
 
 platform:
   os: darwin
@@ -27,7 +27,7 @@ steps:
 ---
 kind: pipeline
 type: exec
-name: Release
+name: macOS Release
 
 platform:
   os: darwin
