@@ -31,6 +31,18 @@ platform:
 
 steps:
 - name: build
+  commands:
+# Get also miniupnp (submodule)
+  - git submodule update --init --recursive
+# Set benjamin's home to have access to max-sdk
+  - export HOME=/Users/$(whoami)
+# Get all homebrew installed commands (cmake)
+  - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+  - cd source
+  - cmake -B build . -DCMAKE_BUILD_TYPE=Release
+  - cmake --build build --config Release
+
+- name: sign_notarize_staple
   environment:
     MyAppleTeam:
       from_secret: MyAppleTeam
@@ -43,17 +55,4 @@ steps:
     AppSpecificPassword:
       from_secret: AppSpecificPassword
   commands:
-# Get also miniupnp (submodule)
-  - git submodule update --init --recursive
-# Set benjamin's home to have access to max-sdk
-  - export HOME=/Users/$(whoami)
-# Get all homebrew installed commands (cmake)
-  - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-  - cd source
-  - cmake -B build . -DCMAKE_BUILD_TYPE=Release
-  - cmake --build build --config Release
-# Unlock keychain
-  - echo $(whoami)
-  - echo $MyPassword | sudo -S su $(whoami)
-#  - security unlock-keychain -p $MyPassword $HOME/Library/Keychains/login.keychain
   - ./sign-all+dmg-notarize+staple_mac-externals.zsh

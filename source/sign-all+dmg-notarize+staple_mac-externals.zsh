@@ -12,8 +12,8 @@ mkdir ../mac_externals
 mv $(find ../externals -d 1 -iname '*.mxo') '../mac_externals'
 
 # remove quarantine flag & codesign each external
-sudo xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
-#echo $MyPassword | sudo -S xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
+#sudo xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
+echo $MyPassword | sudo -S xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
 
 if [[ -d ../mac_externals/bc.upnpc.mxo ]]; then
   codesign --verbose --deep --timestamp --force --sign "$CerticateCommonName" $(find '../mac_externals/bc.upnpc.mxo' -d 3 -type f -iname 'libminiupnpc.*')
