@@ -77,3 +77,4 @@ xcuserdata/
 **/*.build
 **/build
 **/*.dylib
+**/*secret*
