@@ -1,7 +1,8 @@
 #! /bin/zsh -
 
-#CerticateCommonName=""
-#AppSpecificPasswordName=""
+#source ./secrets.sh
+
+echo "$CerticateCommonName"
 
 # remove existing dmg
 rm -f -- ../mac_externals.notarized.dmg
@@ -11,11 +12,13 @@ mkdir ../mac_externals
 mv $(find ../externals -d 1 -iname '*.mxo') '../mac_externals'
 
 # remove quarantine flag & codesign each external
-echo $MyPassword | sudo -S xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
-#security find-certificate -a -c "$CerticateCommonName"
-#security find-identity -p codesigning
-#security unlock-keychain -p $MyPassword
-codesign --deep --timestamp --force --sign "$CerticateCommonName" $(find '../mac_externals' -d 1 -iname '*.mxo')
+sudo xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
+#echo $MyPassword | sudo -S xattr -r -d com.apple.quarantine $(find '../mac_externals' -d 1 -iname '*.mxo')
+
+if [[ -d ../mac_externals/bc.upnpc.mxo ]]; then
+  codesign --verbose --deep --timestamp --force --sign "$CerticateCommonName" $(find '../mac_externals/bc.upnpc.mxo' -d 3 -type f -iname 'libminiupnpc.*')
+fi
+codesign --verbose --deep --timestamp --force --sign "$CerticateCommonName" $(find '../mac_externals' -d 1 -iname '*.mxo')
 
 # create dmg with the externals
 hdiutil create ../mac_externals.notarized.dmg -fs HFS+ -srcfolder ../mac_externals -ov
