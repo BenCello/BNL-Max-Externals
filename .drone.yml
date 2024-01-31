@@ -30,15 +30,18 @@ platform:
   arch: amd64
 
 steps:
-- name: build
-  commands:
+- name: submodules
 # Get also miniupnp (submodule)
   - git submodule update --init --recursive
+
+- name: build
+  commands:
 # Set benjamin's home to have access to max-sdk
   - export HOME=/Users/$(whoami)
 # Get all homebrew installed commands (cmake)
   - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   - cd source
+# Configure & build
   - cmake -B build . -DCMAKE_BUILD_TYPE=Release
   - cmake --build build --config Release
 
@@ -57,3 +60,7 @@ steps:
   commands:
   - cd source
   - ./sign-all+dmg-notarize+staple_mac-externals.zsh
+
+- name: copy dmg
+  commands:
+  - cp mac_externals.notarized.dmg /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.release.dmg
