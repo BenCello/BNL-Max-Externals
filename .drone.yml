@@ -48,6 +48,8 @@ steps:
 
 - name: sign
   environment:
+    MyPassword:
+      from_secret: MyPassword
     CerticateCommonName:
       from_secret: CerticateCommonName
   commands:
@@ -60,8 +62,6 @@ steps:
       from_secret: MyAppleTeam
     MyAppleID:
       from_secret: MyAppleID
-    MyPassword:
-      from_secret: MyPassword
     AppSpecificPassword:
       from_secret: AppSpecificPassword
   commands:
