@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 252.0, 87.0, 706.0, 763.0 ],
+		"rect" : [ 637.0, 127.0, 707.0, 744.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,62 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 449.0, 214.0, 29.0, 20.0 ],
+					"text" : "and"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 426.0, 113.0, 19.0, 20.0 ],
+					"text" : "or"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 199.0, 29.0, 20.0 ],
+					"text" : "and"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 151.0, 85.0, 20.0 ],
+					"presentation_linecount" : 4,
+					"text" : "Then you can"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 9.0, 68.0, 35.0, 20.0 ],
+					"text" : "First"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.754705,
@@ -76,7 +132,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.0, 550.0, 38.0, 20.0 ],
+					"patching_rect" : [ 42.0, 555.0, 38.0, 20.0 ],
 					"text" : "Error"
 				}
 
@@ -98,7 +154,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 41.0, 572.0, 307.0, 22.0 ]
+					"patching_rect" : [ 41.0, 577.0, 307.0, 22.0 ]
 				}
 
 			}
@@ -109,9 +165,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 93.0, 336.0, 81.0, 20.0 ],
-					"presentation_linecount" : 2,
-					"text" : "Redirections"
+					"patching_rect" : [ 93.0, 347.0, 107.0, 20.0 ],
+					"text" : "Redirections info"
 				}
 
 			}
@@ -122,9 +177,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 470.75, 506.0, 54.0, 20.0 ],
-					"presentation_linecount" : 2,
-					"text" : "Devices"
+					"patching_rect" : [ 481.5, 478.0, 79.0, 20.0 ],
+					"text" : "Devices info"
 				}
 
 			}
@@ -135,7 +189,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 616.0, 45.0, 20.0 ],
+					"patching_rect" : [ 53.0, 618.0, 45.0, 20.0 ],
 					"text" : "IP info"
 				}
 
@@ -146,7 +200,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 483.0, 67.0, 20.0 ],
+					"patching_rect" : [ 252.0, 494.0, 67.0, 20.0 ],
 					"text" : "description"
 				}
 
@@ -158,8 +212,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 266.0, 421.0, 53.0, 33.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 266.0, 432.0, 55.0, 33.0 ],
 					"text" : "duration (in sec)"
 				}
 
@@ -170,8 +223,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 220.0, 389.0, 58.0, 20.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 220.0, 400.0, 58.0, 20.0 ],
 					"text" : "enabled?"
 				}
 
@@ -182,7 +234,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 175.0, 434.0, 51.0, 20.0 ],
+					"patching_rect" : [ 175.0, 445.0, 51.0, 20.0 ],
 					"text" : "protocol"
 				}
 
@@ -193,8 +245,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 434.0, 117.0, 20.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 35.0, 445.0, 117.0, 20.0 ],
 					"text" : "receiving IP address"
 				}
 
@@ -206,8 +257,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 104.0, 389.0, 43.0, 33.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 104.0, 400.0, 43.0, 33.0 ],
 					"text" : "inside port"
 				}
 
@@ -219,7 +269,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 389.0, 47.0, 33.0 ],
+					"patching_rect" : [ 25.0, 400.0, 51.0, 33.0 ],
 					"text" : "outside port"
 				}
 
@@ -232,7 +282,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 237.0, 408.0, 24.0, 24.0 ]
+					"patching_rect" : [ 237.0, 419.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -243,9 +293,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 107.0, 505.0, 228.0, 22.0 ],
-					"presentation_linecount" : 7,
-					"text" : "\"Max [bc.upnpc] object with libminiupnpc\""
+					"patching_rect" : [ 107.0, 516.0, 228.0, 22.0 ]
 				}
 
 			}
@@ -256,8 +304,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 247.0, 456.0, 49.0, 22.0 ],
-					"text" : "602016"
+					"patching_rect" : [ 247.0, 467.0, 49.0, 22.0 ]
 				}
 
 			}
@@ -268,8 +315,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.0, 456.0, 32.0, 22.0 ],
-					"text" : "TCP"
+					"patching_rect" : [ 183.0, 467.0, 34.0, 22.0 ]
 				}
 
 			}
@@ -280,8 +326,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 456.0, 103.0, 22.0 ],
-					"text" : "192.168.1.45"
+					"patching_rect" : [ 35.0, 467.0, 103.0, 22.0 ]
 				}
 
 			}
@@ -292,8 +337,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 135.0, 408.0, 42.0, 22.0 ],
-					"text" : "6540"
+					"patching_rect" : [ 135.0, 419.0, 42.0, 22.0 ]
 				}
 
 			}
@@ -304,8 +348,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 56.0, 408.0, 42.0, 22.0 ],
-					"text" : "6541"
+					"patching_rect" : [ 56.0, 419.0, 42.0, 22.0 ]
 				}
 
 			}
@@ -316,7 +359,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 7,
 					"outlettype" : [ "int", "", "int", "", "int", "int", "" ],
-					"patching_rect" : [ 79.0, 358.0, 256.0, 22.0 ],
+					"patching_rect" : [ 79.0, 369.0, 256.0, 22.0 ],
 					"text" : "unpack i address i PROTO i i description"
 				}
 
@@ -327,7 +370,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 538.0, 234.0, 35.0, 20.0 ],
+					"patching_rect" : [ 497.0, 278.0, 35.0, 20.0 ],
 					"text" : "<int>"
 				}
 
@@ -338,8 +381,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 703.0, 327.0, 20.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 52.0, 694.0, 327.0, 20.0 ],
 					"text" : "your box/gateway IP address on the WAN (outside/internet):"
 				}
 
@@ -350,8 +392,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 679.0, 272.0, 20.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 52.0, 670.0, 272.0, 20.0 ],
 					"text" : "your box/gateway IP address on the LAN (inside):"
 				}
 
@@ -362,7 +403,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 655.0, 212.0, 20.0 ],
+					"patching_rect" : [ 52.0, 646.0, 212.0, 20.0 ],
 					"text" : "your computer IP address on the LAN:"
 				}
 
@@ -374,7 +415,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 369.0, 702.0, 104.0, 22.0 ]
+					"patching_rect" : [ 381.0, 693.0, 104.0, 22.0 ]
 				}
 
 			}
@@ -385,7 +426,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.0, 678.0, 104.0, 22.0 ]
+					"patching_rect" : [ 334.0, 669.0, 104.0, 22.0 ]
 				}
 
 			}
@@ -396,7 +437,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 276.0, 654.0, 104.0, 22.0 ]
+					"patching_rect" : [ 288.0, 645.0, 104.0, 22.0 ]
 				}
 
 			}
@@ -407,7 +448,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 361.0, 615.0, 158.0, 22.0 ],
+					"patching_rect" : [ 373.0, 614.0, 158.0, 22.0 ],
 					"text" : "route local gateway external"
 				}
 
@@ -418,7 +459,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 520.75, 561.0, 151.0, 20.0 ],
+					"patching_rect" : [ 531.5, 533.0, 151.0, 20.0 ],
 					"text" : "IP address of UPnP device"
 				}
 
@@ -430,7 +471,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 415.75, 560.0, 103.0, 22.0 ]
+					"patching_rect" : [ 425.0, 532.0, 103.0, 22.0 ]
 				}
 
 			}
@@ -441,8 +482,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 456.75, 529.0, 189.0, 22.0 ],
-					"text" : "regexp http://(\\\\d+.\\\\d+.\\\\d+.\\\\d+)/.*"
+					"patching_rect" : [ 467.5, 501.0, 186.0, 22.0 ],
+					"text" : "regexp http://(\\\\d+.\\\\d+.\\\\d+.\\\\d+).*"
 				}
 
 			}
@@ -465,7 +506,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 272.0, 368.0, 20.0 ],
+					"patching_rect" : [ 26.0, 281.0, 368.0, 20.0 ],
 					"text" : "map outport ip_address inport protocol enabled duration description"
 				}
 
@@ -477,9 +518,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 237.0, 241.0, 33.0 ],
-					"presentation_linecount" : 3,
-					"text" : "output existing UPnP port mappings with their info following the format: "
+					"patching_rect" : [ 58.0, 246.0, 241.0, 33.0 ],
+					"text" : "output existing UPnP port mappings with associated info following the format: "
 				}
 
 			}
@@ -489,8 +529,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 592.0, 179.0, 105.0, 20.0 ],
-					"text" : "<sym> <int> <int>"
+					"patching_rect" : [ 469.0, 178.0, 118.0, 20.0 ],
+					"text" : "<sym>   <int>   <int>"
 				}
 
 			}
@@ -501,7 +541,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 215.0, 171.0, 20.0 ],
+					"patching_rect" : [ 9.0, 224.0, 149.0, 20.0 ],
 					"text" : "Get existing redirections"
 				}
 
@@ -513,8 +553,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 162.0, 239.0, 33.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 101.0, 90.0, 239.0, 33.0 ],
 					"text" : "list UPnP devices on the local network and output their IP address and description file"
 				}
 
@@ -526,8 +565,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 140.0, 165.0, 20.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 50.0, 68.0, 165.0, 20.0 ],
 					"text" : "Get UPnP devices available"
 				}
 
@@ -539,8 +577,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 48.0, 91.0, 205.0, 33.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 135.0, 173.0, 205.0, 33.0 ],
 					"text" : "query the UPnP server to get local/gateway/external IP addresses"
 				}
 
@@ -552,7 +589,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 69.0, 112.0, 20.0 ],
+					"patching_rect" : [ 96.0, 151.0, 112.0, 20.0 ],
 					"text" : "Get IP information"
 				}
 
@@ -587,8 +624,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 447.0, 211.0, 165.0, 20.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 449.0, 236.0, 165.0, 20.0 ],
 					"text" : "remove existing redirection"
 				}
 
@@ -600,7 +636,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 447.0, 233.0, 89.0, 22.0 ],
+					"patching_rect" : [ 449.0, 258.0, 89.0, 22.0 ],
 					"text" : "remove outport"
 				}
 
@@ -613,7 +649,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 156.0, 269.0, 20.0 ],
+					"patching_rect" : [ 426.0, 136.0, 269.0, 20.0 ],
 					"text" : "add redirection for both TCP & UDP protocols"
 				}
 
@@ -624,7 +660,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 394.0, 382.0, 93.0, 22.0 ],
+					"patching_rect" : [ 394.0, 389.0, 93.0, 22.0 ],
 					"text" : "print UPnP_info"
 				}
 
@@ -650,7 +686,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 162.0, 49.0, 22.0 ],
+					"patching_rect" : [ 50.0, 90.0, 49.0, 22.0 ],
 					"text" : "devices"
 				}
 
@@ -662,7 +698,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 91.0, 37.0, 22.0 ],
+					"patching_rect" : [ 96.0, 173.0, 37.0, 22.0 ],
 					"text" : "ipinfo"
 				}
 
@@ -674,7 +710,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 237.0, 47.0, 22.0 ],
+					"patching_rect" : [ 9.0, 246.0, 47.0, 22.0 ],
 					"text" : "maplist"
 				}
 
@@ -686,7 +722,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 425.0, 178.0, 165.0, 22.0 ],
+					"patching_rect" : [ 426.0, 158.0, 165.0, 22.0 ],
 					"text" : "add ip_address inport outport"
 				}
 
@@ -741,7 +777,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 18.5, 203.5, 403.5, 203.5 ],
+					"midpoints" : [ 59.5, 128.5, 403.5, 128.5 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -763,7 +799,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-49", 0 ],
-					"midpoints" : [ 374.0, 455.0, 352.75, 455.0, 352.75, 330.0, 88.5, 330.0 ],
+					"midpoints" : [ 374.0, 455.0, 352.75, 455.0, 352.75, 341.0, 88.5, 341.0 ],
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -841,7 +877,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-60", 1 ],
-					"midpoints" : [ 325.5, 402.0, 325.5, 402.0 ],
+					"midpoints" : [ 325.5, 413.0, 325.5, 413.0 ],
 					"source" : [ "obj-49", 6 ]
 				}
 
@@ -856,7 +892,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 18.5, 128.0, 403.5, 128.0 ],
+					"midpoints" : [ 105.5, 213.0, 403.5, 213.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -864,7 +900,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 18.5, 301.5, 403.5, 301.5 ],
+					"midpoints" : [ 18.5, 308.5, 403.5, 308.5 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -884,6 +920,9 @@
  ],
 		"autosave" : 0,
 		"boxgroups" : [ 			{
+				"boxes" : [ "obj-81", "obj-82" ]
+			}
+, 			{
 				"boxes" : [ "obj-69", "obj-59", "obj-57", "obj-67", "obj-60", "obj-62", "obj-66", "obj-52", "obj-56", "obj-65", "obj-51", "obj-68", "obj-64", "obj-71", "obj-49", "obj-79" ]
 			}
 , 			{
@@ -891,9 +930,6 @@
 			}
 , 			{
 				"boxes" : [ "obj-38", "obj-36", "obj-30", "obj-78" ]
-			}
-, 			{
-				"boxes" : [ "obj-81", "obj-82" ]
 			}
  ]
 	}
