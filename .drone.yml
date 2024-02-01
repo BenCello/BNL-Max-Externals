@@ -75,5 +75,5 @@ steps:
 - name: copy dmg
   commands:
   - commit=`git log -1 --pretty=format:%h`
-  - rm /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.drone_release-*.dmg
+  - rm -f /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.drone_release-*.dmg
   - cp mac_externals.notarized.dmg /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.drone_release-$commit.dmg
