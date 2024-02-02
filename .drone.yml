@@ -41,8 +41,6 @@ steps:
 
 - name: build
   commands:
-# Set benjamin's home to have access to max-sdk
-  - export HOME=/Users/$(whoami)
 # Get all homebrew installed commands (cmake)
   - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   - cd source
