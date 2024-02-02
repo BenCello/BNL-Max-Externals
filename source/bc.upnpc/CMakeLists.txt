@@ -21,7 +21,7 @@ add_subdirectory("miniupnp/miniupnpc")
 # MAX EXTERNAL
 #############################################################
 set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals")
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
+include(../max-sdk-base/script/max-pretarget.cmake)
 
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 
@@ -69,4 +69,4 @@ elseif (APPLE)
       $<TARGET_FILE:${PROJECT_NAME}>)
 endif ()
 
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
+include(../max-sdk-base/script/max-posttarget.cmake)

@@ -12,7 +12,7 @@ project(${THIS_FOLDER_NAME})
 set(CMAKE_OSX_ARCHITECTURES x86_64;arm64)
 set(C74_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../../externals")
 
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-pretarget.cmake)
+include(../max-sdk-base/script/max-pretarget.cmake)
 
 include_directories( 
 	"${MAX_SDK_INCLUDES}"
@@ -40,6 +40,6 @@ target_link_libraries(
 	${CORE_FOUNDATION}
 )
 
-include($ENV{HOME}/Documents/Max\ 8/Packages/max-sdk/source/max-sdk-base/script/max-posttarget.cmake)
+include(../max-sdk-base/script/max-posttarget.cmake)
 
 endif()

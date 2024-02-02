@@ -1,3 +1,6 @@
 [submodule "bc.upnpc/miniupnp"]
 	path = source/bc.upnpc/miniupnp
 	url = https://github.com/miniupnp/miniupnp.git
+[submodule "source/max-sdk-base"]
+	path = source/max-sdk-base
+	url = https://github.com/Cycling74/max-sdk-base.git
