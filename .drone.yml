@@ -92,9 +92,40 @@ steps:
 
 - name: build
   commands:
+# Add cmake path
   - $env:Path += ';C:/Program Files/CMake/bin;'
-  - echo $env:path
   - cd source
 # Configure & build
   - cmake -B build .
   - cmake --build build --config Debug -j 10
+
+---
+kind: pipeline
+type: exec
+name: Windows Release
+
+platform:
+  os: windows
+  arch: amd64
+
+steps:
+- name: submodules
+  commands:
+# Get also miniupnp (submodule)
+  - git submodule update --init --recursive
+
+- name: build
+  commands:
+# Add cmake path
+  - $env:Path += ';C:/Program Files/CMake/bin;'
+  - cd source
+# Configure & build
+  - cmake -B build .
+  - cmake --build build --config Release -j 10
+
+- name: package & copy
+  commands:
+    - commit=`git log -1 --pretty=format:%h`
+    - Copy-Item ./source/build/bc.upnpc/miniupnp/miniupnpc/Release/miniupnpc.dll -Destination ./support/
+    - Compress-Archive -LiteralPath ./externals ./help ./support -DestinationPath ./win_externals.drone_release-$commit.zip
+    - Copy-Item ./win_externals.drone_release-$commit.zip -Destination 'C:/Users/BLevy/Documents/Max 8/Packages/bnl.externals/'
