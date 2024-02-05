@@ -126,7 +126,7 @@ steps:
 - name: package & copy
   commands:
     - $commit=(git log -1 --pretty=format:%h)
-    - Copy-Item ./source/build/bc.upnpc/miniupnp/miniupnpc/Release/miniupnpc.dll -Destination ./support/
+    - Copy-Item ./source/build/bc.upnpc/miniupnp/miniupnpc/Release/miniupnpc.dll -Destination './support/'
     - Compress-Archive -LiteralPath ./externals,./help,./support -DestinationPath ./win_externals.drone_release-$commit.zip
     - Remove-Item 'C:/Users/BLevy/Documents/Max 8/Packages/bnl.externals/win_externals.drone_release-*.zip'
     - Copy-Item ./win_externals.drone_release-$commit.zip -Destination 'C:/Users/BLevy/Documents/Max 8/Packages/bnl.externals'
