@@ -92,6 +92,8 @@ steps:
 
 - name: build
   commands:
+  - echo $env:path
+  - $env:Path += 'C:\Program Files\CMake\bin;'
   - cd source
 # Configure & build
   - cmake -B build .
