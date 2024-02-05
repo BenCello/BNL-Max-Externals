@@ -15,8 +15,6 @@ steps:
 
 - name: build
   commands:
-# Set benjamin's home to have access to max-sdk
-  - export HOME=/Users/$(whoami)
 # Get all homebrew installed commands (cmake)
   - export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   - cd source
@@ -75,3 +73,26 @@ steps:
   - commit=`git log -1 --pretty=format:%h`
   - rm -f /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.drone_release-*.dmg
   - cp mac_externals.notarized.dmg /Users/$(whoami)/Documents/Max\ 8/bnl.externals/mac_externals.drone_release-$commit.dmg
+
+
+---
+kind: pipeline
+type: exec
+name: Windows Debug
+
+platform:
+  os: windows
+  arch: amd64
+
+steps:
+- name: submodules
+  commands:
+# Get also miniupnp (submodule)
+  - git submodule update --init --recursive
+
+- name: build
+  commands:
+  - cd source
+# Configure & build
+  - cmake -B build .
+  - cmake --build build --config Debug -j 10
