@@ -79,3 +79,4 @@ xcuserdata/
 **/build
 **/*.dylib
 **/*secret*
+*.dll
