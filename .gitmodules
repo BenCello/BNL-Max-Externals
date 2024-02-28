@@ -4,3 +4,6 @@
 [submodule "source/max-sdk-base"]
 	path = source/max-sdk-base
 	url = https://github.com/Cycling74/max-sdk-base.git
+[submodule "source/test/Catch2"]
+	path = source/test/Catch2
+	url = https://github.com/catchorg/Catch2.git
