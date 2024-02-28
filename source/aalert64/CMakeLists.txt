@@ -20,18 +20,12 @@ include_directories(
 	"${MAX_SDK_JIT_INCLUDES}"
 )
 
-file(GLOB PROJECT_SRC
-     "*.h"
-	 "*.c"
-     "*.cpp"
-)
-
 find_library(CORE_FOUNDATION CoreFoundation)
 
 add_library( 
 	${PROJECT_NAME} 
 	MODULE
-	${PROJECT_SRC}
+	aalert.c
 )
 
 target_link_libraries(
