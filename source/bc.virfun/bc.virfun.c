@@ -330,7 +330,7 @@ void *threaded_rec_virfun(t_sysparallel_worker *w)
     t_bc_virfun *x = (t_bc_virfun *)w->data;
     float virfun;
     
-    virfun = rec_virfun(x->freqs, &x->freqs[x->nbfreqs-1], 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
+    virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
     
     // Set the output value
     systhread_mutex_lock(x->mutex);
