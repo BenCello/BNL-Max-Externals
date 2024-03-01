@@ -13,11 +13,7 @@
 #include "ext_systhread.h"      // thread mechanisms
 #include "ext_sysparallel.h"    // parallel tasking
 
-#include <stdlib.h>
-#include <math.h>
-
-#define max(a,b) ((a) > (b) ? a : b)
-#define min(a,b) ((a) < (b) ? a : b)
+#include "bc.virfun.h"
 
 /**@ingroup yin
  * @nosubgrouping
@@ -56,12 +52,6 @@ void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av);
 void bc_virfun_do(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av);
 
 t_max_err bc_virfun_approx(t_bc_virfun *x, void *attr , long ac, t_atom *av);
-
-// Internal routines
-double rec_virfun(double* freqs, double* end, double divmin, double divmax, double approx);
-float midi2freq_approx(float midi);
-float midi2freq(float midin);
-float freq2midi(float freqin);
 
 // Thread routines
 void *threaded_rec_virfun(t_sysparallel_worker *w);
@@ -331,57 +321,7 @@ t_max_err bc_virfun_approx(t_bc_virfun *x, void *attr , long ac, t_atom *av)
 	return MAX_ERR_NONE;
 }
 
-/**@memberof t_bc_virfun
- * @brief Recursive function to compute virtual fundamentals*/
-double rec_virfun(double* freqs, double* end, double divmin, double divmax, double approx)
-{
-    double inf,sup;
-    double quo_min, quo_max;
-    double quotient;
-    double resu = 0.0;
-	if (divmin <= divmax)
-	{
-		if (freqs==end) {
-            return((divmin + divmax) / 2.);
-        } else {
-			sup = freqs[0] * (1 + approx);
-			inf = freqs[0] / (1 + approx);
-			quo_min = ceil(inf/divmax);
-			quo_max = floor(sup/divmin);
-			quotient = quo_min;
-			while (quotient <= quo_max)
-			{
-				resu = rec_virfun(&freqs[1],end, max(inf/quotient, divmin), min(sup/quotient, divmax), approx);
-				if (resu > 1.)
-					return resu;
-				quotient++;
-			}
-			return 0.;
-		}
-	}
-	return 0.;
-}
 
-/**@memberof t_bc_virfun
- * @brief Convert the tolerance (in floating point MIDI) to a frequency factor*/
-float midi2freq_approx(float midi)
-{
-	return pow(2,(midi/12.))-1.;
-}
-
-/**@memberof t_bc_virfun
- * @brief Convert Hz to (floating point) MIDI*/
-float freq2midi(float freqin)
-{
-	return 69+12*log2(freqin/440.);
-}
-
-/**@memberof t_bc_virfun
- * @brief Convert (floating point) MIDI to Hz*/
-float midi2freq(float midin)
-{
-	return 440.*pow(2, (midin-69.)/12.);
-}
 
 /**@memberof t_bc_virfun
  * @brief Execute the recursive algorithm in another thread*/
