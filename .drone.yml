@@ -10,8 +10,9 @@ platform:
 steps:
 - name: submodules
   commands:
-# Get also miniupnp (submodule)
+  # get & update submodules
   - git submodule update --init --recursive
+  - git submodule update --recursive --remote
 
 - name: build
   commands:
@@ -39,8 +40,9 @@ platform:
 steps:
 - name: submodules
   commands:
-# Get also miniupnp (submodule)
+  # get & update submodules
   - git submodule update --init --recursive
+  - git submodule update --recursive --remote
 
 - name: build
   commands:
