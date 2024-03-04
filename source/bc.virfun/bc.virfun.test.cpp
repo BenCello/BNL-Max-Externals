@@ -76,7 +76,8 @@ TEST_CASE ("Tests for [bc.virfun]", "[bc.virfun]")
     for (auto f : freqs)
       std::cout<<f<<" ";
     std::cout<<std::endl;
-    // finaly test rec_virfun
-    REQUIRE(rec_virfun(&(*freqs.begin()), &(*freqs.end()), 0.1, *freqs.begin(), midi2freq_approx(0)) == *freqs.begin());
+    // Constructed vectors of a fundamental frequency
+    // => this fundamental if present, no subharmonics and not a singular vector
+    REQUIRE(rec_virfun(&(*freqs.begin()), &(*freqs.end()), 0.1, *freqs.begin(), midi2freq_approx(0)) == (((*freqs.begin()) < midi2freq(i) || freqs.size() == 1) ? *freqs.begin() : midi2freq(i)));
   }
 }
