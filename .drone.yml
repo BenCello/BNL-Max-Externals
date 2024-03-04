@@ -22,6 +22,11 @@ steps:
   - cmake -B build . -DCMAKE_BUILD_TYPE=Debug
   - cmake --build build --config Debug -j 10
 
+- name: test
+  commands:
+  - cd source/build/_test
+  - ./_test
+
 ---
 kind: pipeline
 type: exec
