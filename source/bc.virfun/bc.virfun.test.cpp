@@ -49,17 +49,22 @@ TEST_CASE ("Tests for [bc.virfun]", "[bc.virfun]")
     std::cout<<" ";
   }
   SECTION("rec_virfun") {
+    // One frequency = itself
+    double single_freq = midi2freq(i);
+    REQUIRE(rec_virfun(&single_freq, &single_freq+1, 0.1, single_freq, midi2freq_approx(0)) == midi2freq(i));
+
     double two_freqs [2];
     two_freqs[0] = round(midi2freq(i));
     auto j = Catch::Generators::random(0, 127).get();
     two_freqs[1] = round(midi2freq(j));
     std::cout<<std::endl<<"f1="<<two_freqs[0]<<" f2="<<two_freqs[1];
+    // Two integer frequencies = greatest common divisor
     REQUIRE(round(rec_virfun(two_freqs, two_freqs+2, 0.1, two_freqs[0], midi2freq_approx(0))) == std::gcd((int)round(two_freqs[0]), (int)round(two_freqs[1])));
     std::cout<<" => "<<std::gcd((int)round(two_freqs[0]), (int)round(two_freqs[1]))<<std::endl;
 
     // Generate vectors of (sub-)harmonics
-    auto rand1 = Catch::Generators::random(1, 8);
-    auto rand2 = Catch::Generators::random(0, 1);
+    auto rand1 = Catch::Generators::random(1, 8); // multiplicator
+    auto rand2 = Catch::Generators::random(0, 1); // sub or overtone
     std::vector<double> freqs(8, midi2freq(i));
     for (auto &f : freqs) {
       f = rand2.get() ? f * rand1.get() : f / (rand1.get() % 3) ;
