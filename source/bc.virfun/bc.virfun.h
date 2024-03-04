@@ -19,8 +19,8 @@ double rec_virfun(double* freqs, double* end, double divmin, double divmax, doub
     if (freqs==end) {
             return((divmin + divmax) / 2.);
         } else {
-      sup = freqs[0] * (1 + approx);
-      inf = freqs[0] / (1 + approx);
+      sup = freqs[0] * approx;
+      inf = freqs[0] / approx;
       quo_min = ceil(inf/divmax);
       quo_max = floor(sup/divmin);
       quotient = quo_min;
@@ -41,7 +41,7 @@ double rec_virfun(double* freqs, double* end, double divmin, double divmax, doub
  * @brief Convert the tolerance (in floating point MIDI) to a frequency factor*/
 float midi2freq_approx(float midi)
 {
-  return pow(2,(midi/12.))-1.;
+  return pow(2,(midi/12.));//-1.;
 }
 
 /**@memberof t_bc_virfun

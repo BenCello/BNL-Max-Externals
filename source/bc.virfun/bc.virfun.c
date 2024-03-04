@@ -22,17 +22,17 @@
 typedef struct _bc_virfun 
 {
 	t_object	ob;			///< Pointer to the object itself
-    t_sysparallel_task  *th_compute;    ///< thread reference to compute
-    t_systhread_mutex   mutex;      ///< mutual exclusion lock for threadsafety
-    bool        f_done;     ///< Flag for termination of the recursion
+  t_sysparallel_task  *th_compute;    ///< thread reference to compute
+  t_systhread_mutex   mutex;      ///< mutual exclusion lock for threadsafety
+  bool        f_done;     ///< Flag for termination of the recursion
 	long		a_mode;		///< Mode attribute
 	float		a_approx;	///< Approximation attribute
-//	float		approx;		///< Approximation factor (MIDI)
+	// float		approx;		///< Approximation factor (MIDI)
 	float		approxf;	///< Approximation factor (Hz)
-    double*		freqs;		///< Frequencies array
-    long        nbfreqs;    ///< Number of frequencies in the array
+  double*		freqs;		///< Frequencies array
+  long        nbfreqs;    ///< Number of frequencies in the array
 	long		freqnb;		///< Size of currently allocated array
-    double       o_virfun;   ///< Virfun value to output
+  double       o_virfun;   ///< Virfun value to output
 	void		*out;		///< Outlet 0 (Virtual Fundamental)
 } t_bc_virfun;
 
@@ -116,45 +116,45 @@ void *bc_virfun_new(t_symbol *s, long argc, t_atom *argv)
 	{
 		// outlets
 		x->out = intout(x);
-            
-        if (argc)
-        {
-            if ((argv)->a_type == A_LONG)
-                x->a_approx=(float)atom_getlong(argv);
-            else if ((argv)->a_type == A_FLOAT)
-                x->a_approx=atom_getfloat(argv);
-            else
-                x->a_approx = 0.5;
-        }
-        else
-            x->a_approx = 0.5;
-        x->approxf=midi2freq_approx(x->a_approx);
-        
-        x->freqnb=0;
-        x->freqs=NULL;
-        x->f_done = true;
-        
-        // process attr args, if any
-        attr_args_process(x, argc, argv);
-            
-        // initialize thread elements
-        x->th_compute = NULL;
-        systhread_mutex_new(&x->mutex,0);
-	
+
+    if (argc)
+    {
+      if ((argv)->a_type == A_LONG)
+        x->a_approx=(float)atom_getlong(argv);
+      else if ((argv)->a_type == A_FLOAT)
+        x->a_approx=atom_getfloat(argv);
+      else
+        x->a_approx = 0.5;
     }
-	return (x);
+    else
+      x->a_approx = 0.5;
+    x->approxf=midi2freq_approx(x->a_approx);
+
+    x->freqnb=0;
+    x->freqs=NULL;
+    x->f_done = true;
+
+        // process attr args, if any
+    attr_args_process(x, argc, argv);
+
+        // initialize thread elements
+    x->th_compute = NULL;
+    systhread_mutex_new(&x->mutex,0);
+
+  }
+  return (x);
 }
 
 /**@memberof t_bc_virfun
  * @brief Object destruction */
 void bc_virfun_free(t_bc_virfun *x)
 {
-    if (x->th_compute)
-        object_free((t_object *)x->th_compute);
+  if (x->th_compute)
+    object_free((t_object *)x->th_compute);
 
     // free our mutex
-    if (x->mutex)
-        systhread_mutex_free(x->mutex);
+  if (x->mutex)
+    systhread_mutex_free(x->mutex);
 }
 
 
@@ -166,147 +166,144 @@ void bc_virfun_assist(t_bc_virfun *x, void *b, long io, long index, char *s)
 	{
 		case ASSIST_INLET: // inlets = 1
 			switch (index)
-		{
+      {
 			case 0: // leftmost
 				sprintf(s, "Ordered list of frequencies (Hz)");
 				break;
 			case 1:
 				sprintf(s, "float: Approximation factor (MIDI)");
 				break;
-		}
-			break;
-			
+      }
+      break;
+
 		case ASSIST_OUTLET: // outlets = 2
 			switch (index)
-		{
+      {
 			case 0: // leftmost
 				sprintf(s, "Virtual Fundamental"); 
-		}
-			break;
-	}
-}
+      }
+      break;
+    }
+  }
 
 //@}
 
 ///@name Input/Output routines
 //@{
 
-void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
-{
+  void bc_virfun_list(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
+  {
     if (x->f_done) {
-        defer(x,(method)bc_virfun_do,s,ac,av);
+      defer(x,(method)bc_virfun_do,s,ac,av);
     } else {
-        object_warn((t_object *)x, "bc.virfun is still busy computing...");
+      object_warn((t_object *)x, "bc.virfun is still busy computing...");
     }
-}
+  }
 
 /**@memberof t_bc_virfun
  * @brief Compute and return the virtual fondamental*/
-void bc_virfun_do(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
-{
-	int i;
-    double virfun = 0.;
-    x->nbfreqs = ac;
-	if (x->freqnb<x->nbfreqs)
-	{
-		if (x->freqs)
-			free(x->freqs);
-		x->freqs=(double*)malloc(x->nbfreqs*sizeof(double));
-		x->freqnb=x->nbfreqs;
-	}
-	
-	if (x->a_mode)
-	{
-		for (i=0; i<ac; i++,av++)
-		{
-			if (atom_gettype(av)==A_LONG)
-				x->freqs[i]=midi2freq((float)atom_getlong(av));
-			else if (atom_gettype(av)==A_FLOAT)
-				x->freqs[i]=midi2freq(atom_getfloat(av));
-			else
-				object_error((t_object*)x, "wrong argument type");
-		}
+  void bc_virfun_do(t_bc_virfun *x, t_symbol *s, long ac, t_atom *av)
+  {
+   int i;
+   double virfun = 0.;
+   x->nbfreqs = ac;
+   if (x->freqnb<x->nbfreqs)
+   {
+    if (x->freqs)
+     free(x->freqs);
+   x->freqs=(double*)malloc(x->nbfreqs*sizeof(double));
+   x->freqnb=x->nbfreqs;
+ }
+
+ if (x->a_mode)
+ {
+  for (i=0; i<ac; i++,av++)
+  {
+   if (atom_gettype(av)==A_LONG)
+    x->freqs[i]=midi2freq((float)atom_getlong(av));
+  else if (atom_gettype(av)==A_FLOAT)
+    x->freqs[i]=midi2freq(atom_getfloat(av));
+  else
+    object_error((t_object*)x, "wrong argument type");
+}
         // Unthreaded version
-		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
-        
+		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*x->approxf, x->approxf);
+
         // Threaded version
-        if (x->th_compute == NULL) {
-            x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
-            x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
-        }
-        x->f_done = false;
-        sysparallel_task_execute(x->th_compute);
-        
-        systhread_mutex_lock(x->mutex);
+if (x->th_compute == NULL) {
+  x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
+  x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
+}
+x->f_done = false;
+sysparallel_task_execute(x->th_compute);
+
+systhread_mutex_lock(x->mutex);
         virfun = x->o_virfun;  // shared data
         systhread_mutex_unlock(x->mutex);
         
         // Output
         outlet_float(x->out, (round(freq2midi(virfun)/x->a_approx))*x->a_approx);
         x->f_done = true;
-	}
-	else
-	{
-		for (i=0; i<ac; i++,av++)
-		{
-			if (atom_gettype(av)==A_LONG)
-				x->freqs[i]=atom_getlong(av);
-			else if (atom_gettype(av)==A_FLOAT)
-				x->freqs[i]=atom_getfloat(av);
-			else
-				object_error((t_object*)x, "wrong argument type");
-		}
+      }
+      else
+      {
+        for (i=0; i<ac; i++,av++)
+        {
+         if (atom_gettype(av)==A_LONG)
+          x->freqs[i]=atom_getlong(av);
+        else if (atom_gettype(av)==A_FLOAT)
+          x->freqs[i]=atom_getfloat(av);
+        else
+          object_error((t_object*)x, "wrong argument type");
+      }
         // Unthreaded version
-		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
-        
+		//virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*x->approxf, x->approxf);
+
         // Threaded version
-        if (x->th_compute == NULL) {
-            x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
-            x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
-        }
-        x->f_done = false;
-        sysparallel_task_execute(x->th_compute);
-        
-        systhread_mutex_lock(x->mutex);
+      if (x->th_compute == NULL) {
+        x->th_compute = sysparallel_task_new(x, (method) threaded_rec_virfun, 1);
+        x->th_compute->flags = SYSPARALLEL_PRIORITY_TASK_LOCAL;
+      }
+      x->f_done = false;
+      sysparallel_task_execute(x->th_compute);
+
+      systhread_mutex_lock(x->mutex);
         virfun = x->o_virfun;  // shared data
         systhread_mutex_unlock(x->mutex);
         
         // Output
         outlet_float(x->out, virfun);
         x->f_done = true;
-	}
- }
+      }
+    }
 
 /**@memberof t_bc_virfun
  * @brief Compute and return the virtual fondamental*/
-void bc_virfun_int(t_bc_virfun *x, long n)
-{
-	t_max_err err;
-	t_atom av;
-	t_symbol *s_list = gensym("list");
-	err = atom_setlong(&av, n);
-	if (!err)
-		bc_virfun_list(x, s_list, 1, &av);
+    void bc_virfun_int(t_bc_virfun *x, long n)
+    {
+     t_max_err err;
+     t_atom av;
+     t_symbol *s_list = gensym("list");
+     err = atom_setlong(&av, n);
+     if (!err)
+      bc_virfun_list(x, s_list, 1, &av);
 	///@remarks Of course, virtual fundamental of one pitch is the pitch itself
-	
-}
+
+  }
 
 /**@memberof t_bc_virfun
  * @brief Compute and return the virtual fondamental*/
-void bc_virfun_float(t_bc_virfun *x, double f)
-{
-	t_max_err err;
-	t_atom av;
-	t_symbol *s_list = gensym("list");
-	err = atom_setfloat(&av, f);
-	if (!err)
-		bc_virfun_list(x, s_list, 1, &av);
+  void bc_virfun_float(t_bc_virfun *x, double f)
+  {
+   t_max_err err;
+   t_atom av;
+   t_symbol *s_list = gensym("list");
+   err = atom_setfloat(&av, f);
+   if (!err)
+    bc_virfun_list(x, s_list, 1, &av);
 	///@remarks Of course, virtual fundamental of one pitch is the pitch itself
 }
 //@}
-
-///@name Internal routines
-//@{
 
 /**@memberof t_bc_virfun
  * @brief Set the approximation (tolerance) of the calculation*/
@@ -321,23 +318,21 @@ t_max_err bc_virfun_approx(t_bc_virfun *x, void *attr , long ac, t_atom *av)
 	return MAX_ERR_NONE;
 }
 
-
-
 /**@memberof t_bc_virfun
  * @brief Execute the recursive algorithm in another thread*/
 void *threaded_rec_virfun(t_sysparallel_worker *w)
 {
-    t_bc_virfun *x = (t_bc_virfun *)w->data;
-    float virfun;
-    
-    virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*(1.0+x->approxf), x->approxf);
-    
+  t_bc_virfun *x = (t_bc_virfun *)w->data;
+  float virfun;
+
+  virfun = rec_virfun(x->freqs, x->freqs+x->nbfreqs, 0.1, x->freqs[0]*x->approxf, x->approxf);
+
     // Set the output value
-    systhread_mutex_lock(x->mutex);
+  systhread_mutex_lock(x->mutex);
     x->o_virfun = virfun;  // shared data
     systhread_mutex_unlock(x->mutex);
     
     return NULL;
-}
+  }
 
 //@}

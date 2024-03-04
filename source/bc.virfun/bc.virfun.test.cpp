@@ -33,8 +33,8 @@ TEST_CASE ("Tests for [bc.virfun]", "[bc.virfun]")
   load_midifreqs(v_midif);
 
   SECTION("midi2freq_approx") {
-    REQUIRE(midi2freq_approx(0) == 0);
-    REQUIRE_THAT(midi2freq_approx(1), Catch::Matchers::WithinAbs(0.05946, 0.0001));
+    REQUIRE(midi2freq_approx(0) == 1);
+    REQUIRE_THAT(midi2freq_approx(1), Catch::Matchers::WithinAbs(1.05946, 0.0001));
   }
 
   auto i = GENERATE(take(10, random(0, 127)));
