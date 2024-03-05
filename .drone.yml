@@ -25,6 +25,7 @@ steps:
 
 - name: test
   commands:
+  - cp source/_test/midi_freqs.txt source/build/_test/
   - cd source/build/_test
   - ./_test
 
@@ -109,7 +110,8 @@ steps:
 
 - name: test
   commands:
-  - cd source/build/_test
+  - Copy-Item -Path ./source/_test/midi_freqs.txt -Destination ./source/build/_test/Debug/
+  - cd source/build/_test/Debug
   - ./_test
 
 ---

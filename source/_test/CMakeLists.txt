@@ -14,7 +14,7 @@ project(${THIS_FOLDER_NAME})
 
 # glob all *.test.cpp files from externals folders
 file(GLOB_RECURSE testfiles CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/../**.test.cpp")
-file(COPY "midi_freqs.txt" DESTINATION .)
+#file(COPY "midi_freqs.txt" DESTINATION .)
 
 add_executable(${PROJECT_NAME} ${testfiles})
 #set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C)
