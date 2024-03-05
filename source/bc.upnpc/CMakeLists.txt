@@ -34,18 +34,16 @@ include_directories(
 	"miniupnp/miniupnpc/include"
 )
 
-file(GLOB PROJECT_SRC
-     "*.h"
-	 "*.c"
-     "*.cpp"
-     "miniupnp/miniupnpc/include/*.h"
-     "miniupnp/miniupnpc/src/listdevices.c"
+file(GLOB MINIUPNPC_INCLUDES
+     miniupnp/miniupnpc/include/*.h
 )
 
 add_library( 
 	${PROJECT_NAME} 
 	MODULE
-	${PROJECT_SRC}
+  bc.upnpc.c
+	${MINIUPNPC_INCLUDES}
+  miniupnp/miniupnpc/src/listdevices.c
 )
 
 add_dependencies(${PROJECT_NAME} libminiupnpc-shared)

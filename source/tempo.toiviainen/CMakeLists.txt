@@ -18,15 +18,10 @@ include_directories(
 	"${MAX_SDK_JIT_INCLUDES}"
 )
 
-file(GLOB PROJECT_SRC
-     "*.h"
-	 "*.c"
-     "*.cpp"
-)
 add_library( 
 	${PROJECT_NAME} 
 	MODULE
-	${PROJECT_SRC}
+	toiviainen.c
 )
 
 include(../max-sdk-base/script/max-posttarget.cmake)
