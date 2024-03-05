@@ -13,7 +13,7 @@
 
 #include "bc.virfun.h"
 
-void load_midifreqs(std::vector<float>& in_vector)
+bool load_midifreqs(std::vector<float>& in_vector)
 {
   float freq;
   std::ifstream f_midif ("midi_freqs.txt");
@@ -24,14 +24,18 @@ void load_midifreqs(std::vector<float>& in_vector)
         in_vector[i++] = freq;
     }
     f_midif.close();
+    return true;
   }
-  else std::cout << "Unable to open file"<<std::endl; 
+  else {
+    std::cout << "Unable to open file"<<std::endl;
+    return false;
+  }
 }
 
 TEST_CASE ("Tests for [bc.virfun]", "[bc.virfun]")
 {
   std::vector<float> v_midif( 128 );
-  load_midifreqs(v_midif);
+  REQUIRE(load_midifreqs(v_midif));
 
   SECTION("midi2freq_approx") {
     REQUIRE(midi2freq_approx(0) == 1);
