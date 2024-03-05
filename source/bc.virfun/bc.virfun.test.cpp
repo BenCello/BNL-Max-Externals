@@ -9,6 +9,7 @@
 #include <fstream>
 #include <vector>
 #include <numeric>
+#include <algorithm> // for Windows
 
 #include "bc.virfun.h"
 
