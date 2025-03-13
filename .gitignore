@@ -80,3 +80,4 @@ xcuserdata/
 **/*.dylib
 **/*secret*
 *.dll
+**/*-build/**
