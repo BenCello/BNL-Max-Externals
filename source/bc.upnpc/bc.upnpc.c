@@ -334,6 +334,7 @@ void *bc_upnpc_thdevices(t_bc_upnpc *x)
   struct UPNPUrls urls;
   struct IGDdatas data;
   char lanaddr[64] = "unset";
+  char wanaddr[64] = "unset";
   const char * multicastif = 0;
   const char * minissdpdpath = 0;
   int localport = UPNP_LOCAL_PORT_ANY;
@@ -357,7 +358,7 @@ void *bc_upnpc_thdevices(t_bc_upnpc *x)
       add_device(&sorted_list, dev);
     
     i = 1;
-    i = UPNP_GetValidIGD(devlist, &urls, &data, lanaddr, sizeof(lanaddr));
+    i = UPNP_GetValidIGD(devlist, &urls, &data, lanaddr, sizeof(lanaddr), wanaddr, sizeof(wanaddr));
     if (i == 1)
     {
       struct upnp_dev_list * old_list = x->x_devices;
